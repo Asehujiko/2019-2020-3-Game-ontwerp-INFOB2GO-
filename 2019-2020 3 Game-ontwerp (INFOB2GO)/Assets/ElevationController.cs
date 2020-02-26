@@ -5,16 +5,27 @@ using UnityEngine;
 public class ElevationController : MonoBehaviour
 {
     public GameObject cameraRotator;
-    public GameObject aimingModule;
+    public GameObject body;
+    public GameObject turret;
+    private GameObject aimingModule;
 
     public float rotationSpeed;
     public float targetElevation;
     public float ownElevation;
 
     public Vector3 targetLocation;
+    public float rotation;
+    public float elevation;
+
+    private void Start()
+    {
+        aimingModule = new GameObject();
+        aimingModule.transform.position = gameObject.transform.position;
+    }
 
     void Update()
     {
+        aimingModule.transform.position = gameObject.transform.position;
         targetLocation = cameraRotator.gameObject.GetComponent<CameraController>().aimingPoint;
 
         //print(targetLocation);
@@ -22,12 +33,29 @@ public class ElevationController : MonoBehaviour
         aimingModule.transform.Rotate(0, 0, 0, Space.World);
         aimingModule.transform.LookAt(targetLocation);
 
-        targetElevation = aimingModule.transform.rotation.eulerAngles.x;
+        rotation = Mathf.Cos((turret.transform.localEulerAngles.y / 180) * Mathf.PI);
+        elevation = body.transform.localEulerAngles.x;
+        if (elevation > 180)
+        {
+            elevation -= 360;
+        }
 
-        ownElevation = gameObject.transform.rotation.eulerAngles.x;
+        targetElevation = aimingModule.transform.eulerAngles.x - elevation * rotation;
 
-        if (targetElevation < 135 && targetElevation > 8)
-            targetElevation = 8;
+        while (targetElevation > 180)
+        {
+            targetElevation -= 360;
+        }
+
+        while (targetElevation < -180)
+        {
+            targetElevation += 360;
+        }
+
+        ownElevation = gameObject.transform.localEulerAngles.x;
+
+        if (targetElevation < 135 && targetElevation > 45)
+            targetElevation = 45;
 
         if (targetElevation > 225 && targetElevation < 330)
             targetElevation = 330;
@@ -40,8 +68,6 @@ public class ElevationController : MonoBehaviour
 
         float upperBound = ownElevation - rotationSpeed * Time.deltaTime;
         float lowerBound = ownElevation + rotationSpeed * Time.deltaTime;
-
-        //transform.Rotate(Mathf.Clamp(targetElevation, upperBound, lowerBound) - ownElevation, 0, 0, Space.Self);
 
         gameObject.transform.localRotation = Quaternion.Euler(Mathf.Clamp(targetElevation, upperBound, lowerBound), 0, 0);
     }
