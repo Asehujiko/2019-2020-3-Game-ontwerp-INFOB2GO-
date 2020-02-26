@@ -35,12 +35,18 @@ public class ElevationController : MonoBehaviour
 
         rotation = Mathf.Cos((turret.transform.localEulerAngles.y / 180) * Mathf.PI);
         elevation = body.transform.localEulerAngles.x;
+        float rotation2 = Mathf.Cos(((turret.transform.localEulerAngles.y+90) / 180) * Mathf.PI);
+        float elevation2 = body.transform.localEulerAngles.z;
         if (elevation > 180)
         {
             elevation -= 360;
         }
+        if (elevation2 > 180)
+        {
+            elevation2 -= 360;
+        }
 
-        targetElevation = aimingModule.transform.eulerAngles.x - elevation * rotation;
+        targetElevation = aimingModule.transform.eulerAngles.x - elevation * rotation - elevation2 * rotation2;
 
         while (targetElevation > 180)
         {

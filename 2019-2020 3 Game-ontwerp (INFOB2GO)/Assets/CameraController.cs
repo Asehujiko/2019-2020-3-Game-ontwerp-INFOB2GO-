@@ -9,6 +9,7 @@ public class CameraController : MonoBehaviour
     float maxRange = 500f;
     Vector3 rayOrigin;
     public Vector3 aimingPoint;
+    public GameObject target;
 
     void Start()
     {
@@ -31,6 +32,7 @@ public class CameraController : MonoBehaviour
         if (Physics.Raycast(ray, out hit, maxRange))
         {
             aimingPoint = hit.point;
+            target.transform.position = aimingPoint;
             print(aimingPoint);
         }
         else
