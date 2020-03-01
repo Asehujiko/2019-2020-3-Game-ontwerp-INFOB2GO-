@@ -318,8 +318,9 @@ GameObject:
   - component: {fileID: 543305084}
   - component: {fileID: 543305086}
   - component: {fileID: 543305085}
-  - component: {fileID: 543305088}
   - component: {fileID: 543305087}
+  - component: {fileID: 543305088}
+  - component: {fileID: 543305089}
   m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
@@ -428,6 +429,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 0}
+--- !u!114 &543305089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543305083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d2e510457007db4f990d42bd55cdf62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStart: 1
+  isHighscore: 0
+  isSettings: 0
+  isExit: 0
+  rend: {fileID: 0}
 --- !u!1 &562705344
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,8 +457,9 @@ GameObject:
   - component: {fileID: 562705345}
   - component: {fileID: 562705347}
   - component: {fileID: 562705346}
-  - component: {fileID: 562705349}
   - component: {fileID: 562705348}
+  - component: {fileID: 562705349}
+  - component: {fileID: 562705350}
   m_Layer: 0
   m_Name: Settings
   m_TagString: Untagged
@@ -548,6 +567,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d815224aa51dff44a48c780d0a173f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
+--- !u!114 &562705350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562705344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d2e510457007db4f990d42bd55cdf62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStart: 0
+  isHighscore: 0
+  isSettings: 1
+  isExit: 0
   rend: {fileID: 0}
 --- !u!1 &659785466
 GameObject:
@@ -677,8 +713,9 @@ GameObject:
   - component: {fileID: 1592736885}
   - component: {fileID: 1592736887}
   - component: {fileID: 1592736886}
-  - component: {fileID: 1592736889}
   - component: {fileID: 1592736888}
+  - component: {fileID: 1592736889}
+  - component: {fileID: 1592736890}
   m_Layer: 0
   m_Name: HighScores
   m_TagString: Untagged
@@ -787,6 +824,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 0}
+--- !u!114 &1592736890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592736884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d2e510457007db4f990d42bd55cdf62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStart: 0
+  isHighscore: 1
+  isSettings: 0
+  isExit: 0
+  rend: {fileID: 0}
 --- !u!1 &1915208760
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,8 +852,9 @@ GameObject:
   - component: {fileID: 1915208761}
   - component: {fileID: 1915208766}
   - component: {fileID: 1915208765}
-  - component: {fileID: 1915208764}
   - component: {fileID: 1915208762}
+  - component: {fileID: 1915208764}
+  - component: {fileID: 1915208763}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -834,6 +889,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 16.7, y: 11.171878, z: 0}
   m_Center: {x: 8.35, y: -5.585939, z: 0}
+--- !u!114 &1915208763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915208760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d2e510457007db4f990d42bd55cdf62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStart: 0
+  isHighscore: 0
+  isSettings: 0
+  isExit: 1
+  rend: {fileID: 0}
 --- !u!114 &1915208764
 MonoBehaviour:
   m_ObjectHideFlags: 0
