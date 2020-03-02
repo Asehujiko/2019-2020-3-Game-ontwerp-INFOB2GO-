@@ -14,12 +14,14 @@ public class PlayerScrap : MonoBehaviour
     private Vector3 positionChange;
 
     public int scrap;
+    public int TotalScrap;
     // Start is called before the first frame update
     void Start()
     {
         scaleChange = new Vector3(scale, scale, scale);
         positionChange = new Vector3(0, scale, 0);
         scrap = 0;
+        TotalScrap = 0;
     }
 
     // Update is called once per frame

@@ -2,31 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollectScrap : MonoBehaviour
+public class PlayerGameOver : MonoBehaviour
 {
-
-    PlayerScrap scrap;
-
     // Start is called before the first frame update
     void Start()
     {
-        scrap = FindObjectOfType<PlayerScrap>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    void OnTriggerEnter(Collider collider)
-    {
-        if(collider.tag == "Hull")
+        if (Input.GetKeyDown(KeyCode.Delete))
         {
-            scrap.scrap += 1;
-            scrap.TotalScrap += 1;
-
             Destroy(gameObject);
         }
+    }
+
+    void OnDestroy()
+    {
+        GameObject GameOverObject = GameObject.FindWithTag("GameOver");
+        GameOverObject.GetComponent<PlayerHighScore>().enabled = true;
     }
 }
