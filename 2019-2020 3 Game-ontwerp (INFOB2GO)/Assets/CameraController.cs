@@ -24,7 +24,7 @@ public class CameraController : MonoBehaviour
         y -= Input.GetAxis("Mouse Y");
         y = Mathf.Clamp(y, -30, 60);
 
-        gameObject.transform.localRotation = Quaternion.Euler(y, x, 0);
+        gameObject.transform.rotation = Quaternion.Euler(y, x, 0);
 
         Ray ray = Camera.main.ViewportPointToRay(rayOrigin);
 

@@ -6,7 +6,7 @@ public class ElevationController : MonoBehaviour
 {
     public GameObject cameraRotator;
     public GameObject body;
-    public GameObject turret;
+    public TurretController turret;
     private GameObject aimingModule;
 
     public float rotationSpeed;
@@ -33,9 +33,9 @@ public class ElevationController : MonoBehaviour
         aimingModule.transform.Rotate(0, 0, 0, Space.World);
         aimingModule.transform.LookAt(targetLocation);
 
-        rotation = Mathf.Cos((turret.transform.localEulerAngles.y / 180) * Mathf.PI);
+        rotation = Mathf.Cos((turret.FlatRotation / 180) * Mathf.PI);
         elevation = body.transform.localEulerAngles.x;
-        float rotation2 = Mathf.Cos(((turret.transform.localEulerAngles.y+90) / 180) * Mathf.PI);
+        float rotation2 = Mathf.Cos(((turret.FlatRotation + 90) / 180) * Mathf.PI);
         float elevation2 = body.transform.localEulerAngles.z;
         if (elevation > 180)
         {
@@ -60,8 +60,8 @@ public class ElevationController : MonoBehaviour
 
         ownElevation = gameObject.transform.localEulerAngles.x;
 
-        if (targetElevation < 135 && targetElevation > 45)
-            targetElevation = 45;
+        if (targetElevation < 135 && targetElevation > 8)
+            targetElevation = 8;
 
         if (targetElevation > 225 && targetElevation < 330)
             targetElevation = 330;
