@@ -1,52 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Mathematics;
 
 public class ElevationController : MonoBehaviour
 {
     public GameObject cameraRotator;
     public GameObject body;
-    public TurretController turret;
-    private GameObject aimingModule;
 
     public float rotationSpeed;
     public float targetElevation;
     public float ownElevation;
 
-    public Vector3 targetLocation;
-    public float rotation;
-    public float elevation;
+    public Vector3 target;
+    public Vector3 elevationlocation;
+    public Quaternion bodyrotation;
+    GameObject direction;
 
     private void Start()
     {
-        aimingModule = new GameObject();
-        aimingModule.transform.position = gameObject.transform.position;
+        //aimingModule = new GameObject();
+        //aimingModule.transform.position = gameObject.transform.position;
+        direction = new GameObject();
     }
 
     void Update()
     {
-        aimingModule.transform.position = gameObject.transform.position;
-        targetLocation = cameraRotator.gameObject.GetComponent<CameraController>().aimingPoint;
+        target = cameraRotator.gameObject.GetComponent<CameraController>().aimingPoint;
+        elevationlocation = transform.position;
+        bodyrotation = body.transform.rotation;
 
-        //print(targetLocation);
+        target = new Vector3(target.x - elevationlocation.x, target.y - elevationlocation.y, target.z - elevationlocation.z);
+        target = Quaternion.Inverse(bodyrotation) * target;
+        direction.transform.position = new Vector3(0, 0, 0);
+        direction.transform.LookAt(target);
+        float rotation = direction.transform.eulerAngles.x;
 
-        aimingModule.transform.Rotate(0, 0, 0, Space.World);
-        aimingModule.transform.LookAt(targetLocation);
+        //transform.localRotation = Quaternion.Euler(rotation, 0, 0);
 
-        rotation = Mathf.Cos((turret.FlatRotation / 180) * Mathf.PI);
-        elevation = body.transform.localEulerAngles.x;
-        float rotation2 = Mathf.Cos(((turret.FlatRotation + 90) / 180) * Mathf.PI);
-        float elevation2 = body.transform.localEulerAngles.z;
-        if (elevation > 180)
-        {
-            elevation -= 360;
-        }
-        if (elevation2 > 180)
-        {
-            elevation2 -= 360;
-        }
-
-        targetElevation = aimingModule.transform.eulerAngles.x - elevation * rotation - elevation2 * rotation2;
+        targetElevation = rotation;
 
         while (targetElevation > 180)
         {
