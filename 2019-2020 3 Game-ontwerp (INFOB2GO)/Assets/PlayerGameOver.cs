@@ -23,5 +23,6 @@ public class PlayerGameOver : MonoBehaviour
     {
         GameObject GameOverObject = GameObject.FindWithTag("GameOver");
         GameOverObject.GetComponent<PlayerHighScore>().enabled = true;
+        Cursor.visible = true;
     }
 }

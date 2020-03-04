@@ -17,12 +17,13 @@ public class PlayerHighScore : MonoBehaviour
     {
         GetScrap = FindObjectOfType<PlayerScrap>();
         scrap = GetScrap.TotalScrap;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Cursor.visible = true;
     }
 
     void OnGUI()
