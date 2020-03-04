@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
         if (isStart)
             SceneManager.LoadScene("MyScene");
         if (isHighscore)
-            return;
+            SceneManager.LoadScene("HighScores");
         if (isSettings)
             return;
         if (isExit)

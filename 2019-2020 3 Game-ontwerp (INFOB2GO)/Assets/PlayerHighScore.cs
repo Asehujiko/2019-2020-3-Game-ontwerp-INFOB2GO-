@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHighScore : MonoBehaviour
 {
-    private int ListLenght = 10;
+    private int ListLength = 10;
     private List<int> HighScoreList = new List<int>();
     private List<string> HighScoreNameList = new List<string>();
 
@@ -34,22 +35,23 @@ public class PlayerHighScore : MonoBehaviour
         {
             GetHighScore();
             SaveHighScore(PlayerName, scrap);
+            SceneManager.LoadScene("MainMenu");
         }
     }
 
     private void GetHighScore()
     {
-        for(int i = 0; i < ListLenght; i++)
+        for(int i = 0; i < ListLength; i++)
         {
             HighScoreList.Add(PlayerPrefs.GetInt("High Score" + i, 0));
-            HighScoreNameList.Add(PlayerPrefs.GetString("High Score Name" + i, "-"));
+            HighScoreNameList.Add(PlayerPrefs.GetString("High Score Name" + i, "Empty"));
         }
     }
 
     private void SaveHighScore(string PlayerName, int score)
     {
         bool inserted = false;
-        for(int i = 0; i < ListLenght; i++)
+        for(int i = 0; i < ListLength; i++)
         {
             if(HighScoreList[i] < score && !inserted)
             {
