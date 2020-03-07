@@ -11,7 +11,7 @@ public class PlayerHighScore : MonoBehaviour
 
     private PlayerScrap GetScrap;
     private int scrap;
-    private string PlayerName = "tank";
+    private string PlayerName = "Tank";
 
     // Start is called before the first frame update
     void Start()
