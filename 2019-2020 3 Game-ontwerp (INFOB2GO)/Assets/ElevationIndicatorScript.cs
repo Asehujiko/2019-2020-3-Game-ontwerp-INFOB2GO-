@@ -25,7 +25,7 @@ public class ElevationIndicatorScript : MonoBehaviour
             absoluteRotation -= 360;
         }
 
-        Absolute.transform.position = new Vector3(Screen.width/2, Screen.height/2 + absoluteRotation * 10, 0);
+        Absolute.transform.localPosition = new Vector3(-200, absoluteRotation * 5, 0);
 
         float reletiveRotation = Camera.transform.localEulerAngles.x;
         if (reletiveRotation < -180)
@@ -36,6 +36,6 @@ public class ElevationIndicatorScript : MonoBehaviour
         {
             reletiveRotation -= 360;
         }
-        Reletive.transform.position = new Vector3(Screen.width/2, Screen.height/2 + reletiveRotation * 10, 0);
+        Reletive.transform.localPosition = new Vector3(200, reletiveRotation * 5, 0);
     }
 }

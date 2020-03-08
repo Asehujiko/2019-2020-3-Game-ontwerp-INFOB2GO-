@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankIndicator : MonoBehaviour
+public class TankIndicator2 : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject Turret;
     public GameObject Body;
-    public GameObject TurretSprite;
+    public GameObject Barrel;
     public GameObject BodySprite;
-    private bool active;
+    public GameObject BarrelSprite;
+
+    bool active;
     void Start()
     {
         active = true;
@@ -32,12 +33,11 @@ public class TankIndicator : MonoBehaviour
             return;
         }
 
-        transform.position = new Vector3(Screen.width - 100, 100, 0);
+        transform.position = new Vector3(100, 100, 0);
 
-        float turretRotation = Turret.transform.eulerAngles.y;
-        TurretSprite.transform.rotation = Quaternion.Euler(0, 0, -turretRotation);
-
-        float bodyRotation = Body.transform.eulerAngles.y;
-        BodySprite.transform.rotation = Quaternion.Euler(0, 0, -bodyRotation);
+        float bodyRotation = Body.transform.eulerAngles.x;
+        BodySprite.transform.localRotation = Quaternion.Euler(0, 0, -bodyRotation);
+        float barrelRotation = Barrel.transform.localEulerAngles.x;
+        BarrelSprite.transform.localRotation = Quaternion.Euler(0, 0, -barrelRotation);
     }
 }
