@@ -31,7 +31,6 @@ public class CameraController : MonoBehaviour
         if (Physics.Raycast(ray, out hit, maxRange))
         {
             aimingPoint = hit.point;
-            print(aimingPoint);
         }
         else
         {

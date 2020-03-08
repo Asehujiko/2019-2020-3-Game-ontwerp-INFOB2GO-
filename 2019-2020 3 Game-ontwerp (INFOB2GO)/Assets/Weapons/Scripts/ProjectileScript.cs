@@ -5,14 +5,26 @@ using UnityEngine;
 public class ProjectileScript : MonoBehaviour
 {
     public GameObject Explosion;
+    public int damage;
 
     void Start()
     {
         Destroy(gameObject, 2);
     }
 
-    void OnCollisionEnter()
+    public void setDamage(int i)
     {
+        damage = i;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        GameObject other = collision.gameObject;
+        EnemyController otherController = other.GetComponent<EnemyController>();
+
+        if (otherController != null)
+            otherController.getHit(damage);
+
         GameObject explosion = Instantiate(Explosion, transform.position, transform.rotation) as GameObject;
         Destroy(gameObject);
     }
