@@ -11,10 +11,16 @@ public class PlayerController : MonoBehaviour
     public float laserLength = 20f;
     public float railgunLength = 20f;
 
+    public CameraController cameraController;
+
     public GameObject autocannonProjectile;
     public GameObject canistershotProjectile;
     public GameObject gatlingProjectile;
     public GameObject bouncerProjectile;
+    public GameObject outboundMortarProjectile;
+    public GameObject inboundMortarProjectile;
+    public GameObject energysphereProjectile;
+    public GameObject dronebomberProjectile;
 
     public GameObject TurretProjectileEmitter;
     public GameObject HullProjectileEmitter;
@@ -31,6 +37,7 @@ public class PlayerController : MonoBehaviour
 
     float turretLastFired = 0;
     float hullLastFired = 0;
+    float roofLastFired = 0;
 
     void Start()
     {
@@ -39,7 +46,8 @@ public class PlayerController : MonoBehaviour
 
         Vector3[] laserStarts = new Vector3[2] { Vector3.zero, Vector3.zero };
         beamRenderer.SetPositions(laserStarts);
-        beamRenderer.SetWidth(0.1f, 0.1f);
+        beamRenderer.startWidth = 0.1f;
+        beamRenderer.endWidth = 0.1f;
     }
 
     void Update()
@@ -49,6 +57,7 @@ public class PlayerController : MonoBehaviour
 
         turretLastFired += Time.deltaTime;
         hullLastFired += Time.deltaTime;
+        roofLastFired += Time.deltaTime;
 
         if (turretLastFired >= 0.2f)
             beamRenderer.enabled = false;
@@ -83,19 +92,19 @@ public class PlayerController : MonoBehaviour
                 ShootCanistershot();
             }
 
-            if (stage == 6)
+            if (stage >= 6)
             {
                 ShootBouncer();
             }
+        }
 
-            if (stage >= 7)
+        if (Input.GetKey("space"))
+        {
+            if (stage == 7)
             {
                 ShootMortar();
             }
-        }
 
-        if (Input.GetKeyDown("space"))
-        {
             if (stage == 8)
             {
                 ShootEnergysphere();
@@ -237,17 +246,39 @@ public class PlayerController : MonoBehaviour
 
     public void ShootMortar()
     {
+        if (roofLastFired >= 1)
+        {
+            roofLastFired = 0;
 
+            GameObject roofProjectile1 = Instantiate(outboundMortarProjectile, RoofProjectileEmitter.transform.position, RoofProjectileEmitter.transform.rotation) as GameObject;
+            roofProjectile1.GetComponent<Rigidbody>().AddRelativeForce(0, 1000, 0);
+            Destroy(roofProjectile1, 1);
+
+            GameObject roofProjectile2 = Instantiate(inboundMortarProjectile, cameraController.aimingPoint + new Vector3(0, 20, 0), RoofProjectileEmitter.transform.rotation) as GameObject;
+            roofProjectile2.GetComponent<Rigidbody>().AddRelativeForce(0, -250, 0);
+            roofProjectile2.GetComponent<GrenadeScript>().setDamage(100);
+        }
     }
 
     public void ShootEnergysphere()
     {
+        if (roofLastFired >= 1)
+        {
+            roofLastFired = 0;
 
+            GameObject roofProjectile = Instantiate(energysphereProjectile, RoofProjectileEmitter.transform.position, RoofProjectileEmitter.transform.rotation) as GameObject;
+            roofProjectile.GetComponent<FloaterScript>().setDamage(1);
+        }
     }
 
     public void ShootDronebomber()
     {
-
+        if (roofLastFired >= 1)
+        {
+            roofLastFired = 0;
+            GameObject roofProjectile = Instantiate(dronebomberProjectile, RoofProjectileEmitter.transform.position, RoofProjectileEmitter.transform.rotation) as GameObject;
+            roofProjectile.GetComponent<DroneScript>().setDamage(100);
+        }
     }
 
     public void ShootSonicweapon()

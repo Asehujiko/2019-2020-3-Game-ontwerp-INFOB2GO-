@@ -350,6 +350,7 @@ MonoBehaviour:
   beamRenderer: {fileID: 202916781141290931}
   laserLength: 50
   railgunLength: 20
+  cameraController: {fileID: 4224066120955953208}
   autocannonProjectile: {fileID: 4091539921186162163, guid: 643647ba388db64409b227e3bae8c88e,
     type: 3}
   canistershotProjectile: {fileID: 4138244332656932827, guid: 6183c539557555d44a666b11271e6f32,
@@ -357,6 +358,14 @@ MonoBehaviour:
   gatlingProjectile: {fileID: 5614186771543837807, guid: 63d1585dbae34e8489ae03be1b7acca1,
     type: 3}
   bouncerProjectile: {fileID: 6535012704086793458, guid: 49c4668da768ffe4791e23090fc570f8,
+    type: 3}
+  outboundMortarProjectile: {fileID: 1461096877763997425, guid: 6e06644e841395f45a835b1dbea912a0,
+    type: 3}
+  inboundMortarProjectile: {fileID: 7489186712674121099, guid: 434f8be7f3cac154a95ec50303a1545b,
+    type: 3}
+  energysphereProjectile: {fileID: 213252369137957122, guid: f7c29a01d101c594d882e1fd7a553168,
+    type: 3}
+  dronebomberProjectile: {fileID: 3547252426517248942, guid: e8c715527a5933b45a6e395054bf185a,
     type: 3}
   TurretProjectileEmitter: {fileID: 4224066120471234488}
   HullProjectileEmitter: {fileID: 2735556841830608385}
@@ -389,7 +398,7 @@ LineRenderer:
   m_GameObject: {fileID: 4224066120371131723}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -1013,7 +1022,6 @@ GameObject:
   - component: {fileID: 6325873553560275292}
   - component: {fileID: 3290300729498560581}
   - component: {fileID: 3356950690436649274}
-  - component: {fileID: 1282682632724670770}
   m_Layer: 0
   m_Name: RoofWeapon
   m_TagString: Untagged
@@ -1029,7 +1037,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7781222194174811939}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.375, z: -0.25}
+  m_LocalPosition: {x: 0, y: 0.5, z: -0.25}
   m_LocalScale: {x: 0.75, y: 0.25, z: 1}
   m_Children:
   - {fileID: 6348341927952615312}
@@ -1083,16 +1091,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1282682632724670770
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7781222194174811939}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
