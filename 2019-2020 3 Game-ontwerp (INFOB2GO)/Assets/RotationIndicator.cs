@@ -26,7 +26,7 @@ public class RotationIndicator : MonoBehaviour
             reletiveRotation -= 360;
         }
 
-        Reletive.transform.localPosition = new Vector3(reletiveRotation * 5, Screen.height/2 - 30, 0);
+        Reletive.transform.localPosition = new Vector3(-reletiveRotation * 5, Screen.height/2 - 30, 0);
 
         float absoluteRotation = Camera.transform.eulerAngles.y;
         if (absoluteRotation < -180)
@@ -38,6 +38,6 @@ public class RotationIndicator : MonoBehaviour
             absoluteRotation -= 360;
         }
 
-        Absolute.transform.localPosition = new Vector3(absoluteRotation * 5, -Screen.height/2 +30, 0);
+        Absolute.transform.localPosition = new Vector3(-absoluteRotation * 5, -Screen.height/2 +30, 0);
     }
 }
