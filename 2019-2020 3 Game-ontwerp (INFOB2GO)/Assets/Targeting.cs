@@ -21,7 +21,7 @@ public class Targeting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Weapon(PrimaryWeapon);
     }
 
     private void Weapon(GameObject Weapon)
