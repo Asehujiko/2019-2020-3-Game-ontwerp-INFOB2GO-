@@ -2733,6 +2733,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5891894093678741428, guid: eeb4e1821c8d23a43a4d618045d34668,
+        type: 3}
+      propertyPath: rotationSpeed
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 5891894093678741429, guid: eeb4e1821c8d23a43a4d618045d34668,
         type: 3}
       propertyPath: m_LocalPosition.x
