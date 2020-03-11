@@ -5,10 +5,7 @@ using UnityEngine;
 public class Targeting : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject PrimaryWeapon;
-    public GameObject SecondaryWeapon;
-    public GameObject TertiaryWeapon;
-    public GameObject CameraRotator;
+    public GameObject Gun;
     public Camera Camera;
     public GameObject retical;
 
@@ -21,10 +18,10 @@ public class Targeting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Weapon(PrimaryWeapon);
+        Weapon(Gun, retical);
     }
 
-    private void Weapon(GameObject Weapon)
+    private void Weapon(GameObject Weapon, GameObject retical)
     {
         if (Weapon == null)
         {
@@ -46,9 +43,8 @@ public class Targeting : MonoBehaviour
             hitlocation = Weapon.transform.forward * maxRange;
         }
 
-        hitlocation = new Vector3(hitlocation.x - CameraRotator.transform.position.x, hitlocation.y - CameraRotator.transform.position.y, hitlocation.z - CameraRotator.transform.position.z);
-        hitlocation = Quaternion.Inverse(CameraRotator.transform.rotation) * hitlocation;
+        hitlocation = Camera.WorldToScreenPoint(hitlocation);
 
-        retical.transform.localPosition = hitlocation;
+        retical.transform.position = hitlocation;
     }
 }
