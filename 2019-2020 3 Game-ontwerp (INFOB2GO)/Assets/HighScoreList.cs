@@ -24,9 +24,9 @@ public class HighScoreList : MonoBehaviour
         GUI.contentColor = Color.black;
         for (int i = 0; i < 10; i++)
         {
-            GUI.Label(new Rect(160, 220 + i * 55, 100, 20), ((i + 1) + " "), textStyle);
-            GUI.Label(new Rect(230, 220 + i * 55, 100, 20), ("Name: " + PlayerPrefs.GetString("High Score Name" + i, "Empty")), textStyle);
-            GUI.Label(new Rect(800, 220 + i * 55, 100, 20), ("Score: " + (PlayerPrefs.GetInt("High Score" + i, 0))), textStyle);
+            GUI.Label(new Rect(Screen.width / 4, 220 + i * 55, 100, 20), ((i + 1) + " "), textStyle);
+            GUI.Label(new Rect((Screen.width / 4 + Screen.width / 20), 220 + i * 55, 100, 20), ("Name: " + PlayerPrefs.GetString("High Score Name" + i, "Empty")), textStyle);
+            GUI.Label(new Rect((Screen.width / 3 + Screen.width / 3), 220 + i * 55, 100, 20), ("Score: " + (PlayerPrefs.GetInt("High Score" + i, 0))), textStyle);
         }
     }
 }
