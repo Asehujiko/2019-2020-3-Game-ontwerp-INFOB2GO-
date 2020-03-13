@@ -17,6 +17,6 @@ public class SmokeOnDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        main.startSize = 0.1;
+        
     }
 }
