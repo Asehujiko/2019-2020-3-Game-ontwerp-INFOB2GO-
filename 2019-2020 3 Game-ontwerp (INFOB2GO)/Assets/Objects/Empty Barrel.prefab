@@ -42,7 +42,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrap: {fileID: 0}
-  destroyedPats:
+  destroyedParts:
   - {fileID: 4874195412528504382, guid: 2e040b223641ced4baa8707f6fd67593, type: 3}
   health: 10
 --- !u!1001 &759714423652302763

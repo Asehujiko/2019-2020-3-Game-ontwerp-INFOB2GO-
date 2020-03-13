@@ -5,7 +5,7 @@ using UnityEngine;
 public class HealthController : MonoBehaviour
 {
     public GameObject scrap;
-    public List<GameObject> destroyedPats;
+    public List<GameObject> destroyedParts;
     public int health;
     bool dead;
 
@@ -30,9 +30,9 @@ public class HealthController : MonoBehaviour
             {
                 Instantiate(scrap, transform.position, transform.rotation);
             }
-            for (int i = 0; i < destroyedPats.Count; i++)
+            for (int i = 0; i < destroyedParts.Count; i++)
             {
-                Instantiate(destroyedPats[i], transform.position, transform.rotation);
+                Instantiate(destroyedParts[i], transform.position, transform.rotation);
             }
             Destroy(gameObject);
         }

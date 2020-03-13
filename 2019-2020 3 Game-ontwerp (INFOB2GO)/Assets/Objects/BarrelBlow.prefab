@@ -104,9 +104,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomniss: 0.2
   velocity: 10
-  rotation: 90
+  rotation: 10
   direction: {x: 0, y: 1, z: 0}
-  rotationAxis: {x: 1, y: 0, z: 0}
   rigidbody: {fileID: 4331983109690829113}
 --- !u!1001 &4331983109690829117
 PrefabInstance:
