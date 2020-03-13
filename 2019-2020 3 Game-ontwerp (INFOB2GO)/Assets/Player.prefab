@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6597930649107261066}
   - component: {fileID: 4859349059832342085}
   - component: {fileID: 709243659540438495}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HullWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8599109966532503799}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HullWeaponEmitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 4224066119766586167}
   - component: {fileID: 4224066119766586166}
   - component: {fileID: 4224066119766586161}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 4224066120153427941}
   - component: {fileID: 4224066120153427940}
   - component: {fileID: 4224066120153427943}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mantlet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 4224066120371131720}
   - component: {fileID: 4224066120371131726}
   - component: {fileID: 202916781141290931}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -496,7 +496,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4224066120471234489}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TurretWeaponEmitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -528,7 +528,7 @@ GameObject:
   - component: {fileID: 4224066120583478535}
   - component: {fileID: 4224066120583478534}
   - component: {fileID: 4224066120583478529}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -611,7 +611,7 @@ GameObject:
   - component: {fileID: 4224066120765929520}
   - component: {fileID: 4224066120765929527}
   - component: {fileID: 4224066120765929526}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TurretWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -690,7 +690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4224066120955953211}
   - component: {fileID: 4224066120955953208}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CameraRotator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -734,7 +734,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4224066121127343294}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AimingModule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -765,7 +765,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4224066121310558705}
   - component: {fileID: 4224066121310558710}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ElevationRotator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -821,7 +821,7 @@ GameObject:
   - component: {fileID: 4224066121584902928}
   - component: {fileID: 4224066121584902931}
   - component: {fileID: 4224066121584902930}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hull
   m_TagString: Hull
   m_Icon: {fileID: 0}
@@ -913,7 +913,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4224066121903484385}
   - component: {fileID: 4224066121903484390}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TurretRotator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -966,7 +966,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2287656739898681140}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HullBallMount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -997,7 +997,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6348341927952615312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoofWeaponEmitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1029,7 +1029,7 @@ GameObject:
   - component: {fileID: 6325873553560275292}
   - component: {fileID: 3290300729498560581}
   - component: {fileID: 3356950690436649274}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoofWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1105,6 +1105,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4224066120371131721}
     m_Modifications:
+    - target: {fileID: 3244510508424374167, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244510508441581926, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244510508507115513, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3244510508507115514, guid: a71d1170ed2e0a34589a1b3955b80d3b,
         type: 3}
       propertyPath: Camera
@@ -1125,10 +1140,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Relative
       objectReference: {fileID: 0}
+    - target: {fileID: 3244510508544425789, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244510508655704239, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3244510508713141090, guid: a71d1170ed2e0a34589a1b3955b80d3b,
         type: 3}
       propertyPath: m_Name
       value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244510508713141090, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3244510508713141094, guid: a71d1170ed2e0a34589a1b3955b80d3b,
         type: 3}
@@ -1235,6 +1265,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3244510508848342564, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244510508891804057, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3244510508891804059, guid: a71d1170ed2e0a34589a1b3955b80d3b,
         type: 3}
       propertyPath: Body
@@ -1255,6 +1295,11 @@ PrefabInstance:
       propertyPath: BarrelSprite
       value: 
       objectReference: {fileID: 5885662532602671136}
+    - target: {fileID: 3244510508926875627, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3244510508926875629, guid: a71d1170ed2e0a34589a1b3955b80d3b,
         type: 3}
       propertyPath: Body
@@ -1275,6 +1320,41 @@ PrefabInstance:
       propertyPath: BodySprite
       value: 
       objectReference: {fileID: 5885662532475498155}
+    - target: {fileID: 3244510509064580348, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244510509084905169, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244510509108431690, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244510509191627587, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244510509303660342, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244510509400252427, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244510509670645789, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3244510509670645790, guid: a71d1170ed2e0a34589a1b3955b80d3b,
         type: 3}
       propertyPath: Camera
@@ -1295,10 +1375,25 @@ PrefabInstance:
       propertyPath: Relative
       value: 
       objectReference: {fileID: 5885662532712380338}
+    - target: {fileID: 3244510509772485247, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3244510509799761244, guid: a71d1170ed2e0a34589a1b3955b80d3b,
         type: 3}
       propertyPath: m_Name
       value: Relative
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244510509799761244, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244510509904094745, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3244510509904094747, guid: a71d1170ed2e0a34589a1b3955b80d3b,
         type: 3}
@@ -1320,6 +1415,21 @@ PrefabInstance:
       propertyPath: Gun
       value: 
       objectReference: {fileID: 4224066121310558704}
+    - target: {fileID: 3244510509970732860, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244510510098451875, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244510510337570295, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a71d1170ed2e0a34589a1b3955b80d3b, type: 3}
 --- !u!224 &5885662532612664297 stripped

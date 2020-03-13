@@ -148,7 +148,7 @@ public class PlayerController : MonoBehaviour
         {
             endPoint = rayHit.point;
 
-            GameObject other = rayHit.collider.gameObject;
+            GameObject other = rayHit.collider.transform.root.gameObject;
             EnemyController otherController = other.GetComponent<EnemyController>();
 
             if (otherController != null)
