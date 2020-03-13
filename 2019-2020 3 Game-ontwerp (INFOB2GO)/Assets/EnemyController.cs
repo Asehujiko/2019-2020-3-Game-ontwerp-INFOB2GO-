@@ -1,32 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
-    public GameObject scrap;
-    public int health;
-    bool dead;
+    private Vector3 location, rayOrigin;
+    private float maxRange = 500f;
 
-    public void setHealth(int health)
+    public NavMeshAgent agent;
+
+    private void Start()
     {
-        this.health = health;
+        rayOrigin = new Vector3(0.5f, 0.5f, 0f);
     }
 
-    public void getHit(int damage)
+    void Update()
     {
-        health -= damage;
-        if (health <= 0)
-            die();
-    }
-
-    void die()
-    {
-        if(!dead)
+        if (Input.GetKey(KeyCode.Space))
         {
-            dead = true;
-            Instantiate(scrap, transform.position, transform.rotation);
-            Destroy(gameObject);
+            Ray ray = Camera.main.ViewportPointToRay(rayOrigin);
+
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, maxRange))
+            {
+                location = hit.point;
+                agent.SetDestination(location);
+            }
         }
     }
+
+
 }

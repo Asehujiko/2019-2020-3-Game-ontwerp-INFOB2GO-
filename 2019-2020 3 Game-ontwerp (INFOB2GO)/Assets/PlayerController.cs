@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
             endPoint = rayHit.point;
 
             GameObject other = rayHit.collider.transform.root.gameObject;
-            EnemyController otherController = other.GetComponent<EnemyController>();
+            HealthController otherController = other.GetComponent<HealthController>();
 
             if (otherController != null)
                 otherController.getHit(1);
@@ -220,7 +220,7 @@ public class PlayerController : MonoBehaviour
                 RaycastHit rayHit = rayHits[i];
 
                 GameObject other = rayHit.collider.gameObject;
-                EnemyController otherController = other.GetComponent<EnemyController>();
+                HealthController otherController = other.GetComponent<HealthController>();
 
                 if (otherController != null)
                     otherController.getHit(100);

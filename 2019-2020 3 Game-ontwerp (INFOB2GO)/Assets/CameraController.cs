@@ -34,7 +34,7 @@ public class CameraController : MonoBehaviour
         }
         else
         {
-            aimingPoint = gameObject.transform.forward * maxRange;
+            aimingPoint = gameObject.transform.forward * maxRange + gameObject.transform.position;
         }
     }
 }

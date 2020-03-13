@@ -42,7 +42,7 @@ public class Targeting : MonoBehaviour
         }
         else
         {
-            hitlocation = Weapon.transform.forward * maxRange;
+            hitlocation = Weapon.transform.forward * maxRange + Weapon.transform.position;
         }
 
         hitlocation = Camera.WorldToScreenPoint(hitlocation);
