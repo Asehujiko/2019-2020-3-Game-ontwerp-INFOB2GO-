@@ -5,18 +5,29 @@ using UnityEngine;
 public class SmokeOnDamage : MonoBehaviour
 {
     ParticleSystem ps;
-    ParticleSystem.MainModule main;
+    public float playerHealth = 10;//change to player health
 
     // Start is called before the first frame update
     void Start()
     {
         ps = GetComponent<ParticleSystem>();
-        main = ps.main;
     }
 
     // Update is called once per frame
     void Update()
     {
+        var main = ps.main;
+        if(playerHealth <= 5.0f)
+        {
+            main.startSpeed = playerHealth;
+            ps.enableEmission = true;
+        }
+        else
+        {
+            main.startSpeed = 5;
+            ps.enableEmission = false;
+        }
+        
         
     }
 }

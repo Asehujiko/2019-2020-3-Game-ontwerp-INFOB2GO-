@@ -1535,6 +1535,7 @@ GameObject:
   - component: {fileID: 1476602837}
   - component: {fileID: 1476602839}
   - component: {fileID: 1476602838}
+  - component: {fileID: 1476602840}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
@@ -1756,7 +1757,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5.5
+      scalar: 5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -6278,6 +6279,19 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &1476602840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476602836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e74efc7c2226d6e4f93eaf711a155329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: 10
 --- !u!4 &1530330721 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5486473697146571444, guid: 31c5c038f891c0843a3e926368847e7f,
