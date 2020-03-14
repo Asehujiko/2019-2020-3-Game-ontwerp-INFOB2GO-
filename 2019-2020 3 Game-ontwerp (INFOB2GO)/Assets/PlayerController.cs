@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour
     public float scale;
 
     public int scrap;
+    public int health = 100;
+    public int maxhealth = 100;
 
     private Vector3 scaleChange;
     private Vector3 positionChange;
@@ -38,6 +40,7 @@ public class PlayerController : MonoBehaviour
     float turretLastFired = 0;
     float hullLastFired = 0;
     float roofLastFired = 0;
+    float sonicCharge = 0;
 
     void Start()
     {
@@ -84,7 +87,6 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-
         if (Input.GetMouseButton(1))
         {
             if (stage >= 3 && stage <= 5)
@@ -120,6 +122,15 @@ public class PlayerController : MonoBehaviour
                 ShootSonicweapon();
             }
         }
+        else
+        {
+            sonicCharge = 0;
+        }
+
+        if (Input.GetKeyDown("r"))
+        {
+            repair();
+        }
     }
 
     public void GetScrap()
@@ -135,6 +146,41 @@ public class PlayerController : MonoBehaviour
                 stage++;
         }
     }
+
+    public void getHit(int damage)
+    {
+        health-= damage;
+        if(health <= 0)
+        {
+            if (stage > 1)
+            {
+                stage--;
+                transform.localScale -= scaleChange;
+                transform.position -= positionChange;
+                health = maxhealth;
+            }
+            else
+                die();
+        }
+    }
+
+    public void die()
+    {
+        print("ded");
+        //terug naar het hoofdmenu en zo
+    }
+
+    public void repair()
+    {
+        if (scrap > 0 && health < maxhealth)
+        {
+            scrap--;
+            health += 25;
+            if (health > maxhealth)
+                health = maxhealth;
+        }
+    }
+
 
     public void ShootLaser()
     {
@@ -219,7 +265,7 @@ public class PlayerController : MonoBehaviour
             {
                 RaycastHit rayHit = rayHits[i];
 
-                GameObject other = rayHit.collider.gameObject;
+                GameObject other = rayHit.collider.transform.root.gameObject;
                 HealthController otherController = other.GetComponent<HealthController>();
 
                 if (otherController != null)
@@ -283,6 +329,17 @@ public class PlayerController : MonoBehaviour
 
     public void ShootSonicweapon()
     {
+        sonicCharge += Time.deltaTime;
+        if (sonicCharge >= 3)
+        {
+            Collider[] others = Physics.OverlapSphere(this.transform.position, 100);
+            for (int i = 0; i < others.Length; i++)
+            {
+                HealthController otherController = others[i].GetComponent<HealthController>();
 
+                if (otherController != null)
+                    otherController.die();
+            }
+        }
     }
 }

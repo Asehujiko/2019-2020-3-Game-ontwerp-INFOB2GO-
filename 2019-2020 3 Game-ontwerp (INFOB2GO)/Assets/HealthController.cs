@@ -21,7 +21,7 @@ public class HealthController : MonoBehaviour
             die();
     }
 
-    void die()
+    public void die()
     {
         if (!dead)
         {

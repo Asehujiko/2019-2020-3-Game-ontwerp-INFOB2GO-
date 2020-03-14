@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 5936516882102524563}
   - component: {fileID: -4310765856628117288}
   - component: {fileID: 302608951743117811}
+  - component: {fileID: 7326951328025294066}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -250,6 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrap: {fileID: 2358608120228197252, guid: 40a9a5ef67ebe9f4aa00cc9a31186bb9, type: 3}
+  destroyedParts: []
   health: 100
 --- !u!195 &302608951743117811
 NavMeshAgent:
@@ -273,6 +275,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 1
   m_ObstacleAvoidanceType: 3
+--- !u!65 &7326951328025294066
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4326724344726223400}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6599489204652991024
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +331,6 @@ GameObject:
   - component: {fileID: 1216705271716285042}
   - component: {fileID: 8893914090193642227}
   - component: {fileID: 4351658617044308624}
-  - component: {fileID: 6050214255073398712}
   - component: {fileID: 6759307425718783601}
   m_Layer: 9
   m_Name: Body
@@ -386,19 +400,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6050214255073398712
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6801878184879102257}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6759307425718783601
 BoxCollider:
   m_ObjectHideFlags: 0
