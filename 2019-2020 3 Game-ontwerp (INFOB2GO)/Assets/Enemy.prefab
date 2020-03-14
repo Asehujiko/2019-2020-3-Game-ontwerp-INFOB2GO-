@@ -250,6 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrap: {fileID: 2358608120228197252, guid: 40a9a5ef67ebe9f4aa00cc9a31186bb9, type: 3}
+  destroyedParts: []
   health: 100
 --- !u!195 &302608951743117811
 NavMeshAgent:
@@ -270,7 +271,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 1
-  m_BaseOffset: 0
+  m_BaseOffset: -0.2
   m_WalkableMask: 1
   m_ObstacleAvoidanceType: 3
 --- !u!1 &6599489204652991024
