@@ -8,17 +8,22 @@ public class HighScoreTable : MonoBehaviour
 
     public Text highScoreNames;
     public Text highScores;
-    private List<string> names = new List<string>();
-    private List<string> scores = new List<string>();
+    public List<string> names = new List<string>();
+    public List<string> scores = new List<string>();
 
     void Start()
+    {
+        DrawTable();
+    }
+
+    public void DrawTable()
     {
         for (int i = 0; i < 10; i++)
         {
             names.Add(PlayerPrefs.GetString("High Score Name" + i, "Empty"));
             scores.Add((PlayerPrefs.GetInt("High Score" + i, 0)).ToString());
         }
-        
+
         highScoreNames.text = ListToText(names);
         highScores.text = ListToText(scores);
     }
