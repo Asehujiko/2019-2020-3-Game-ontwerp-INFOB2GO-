@@ -7,7 +7,7 @@ public class HealthController : MonoBehaviour
     public GameObject scrap;
     public List<GameObject> destroyedParts;
     public int health;
-    bool dead;
+    protected bool dead;
 
     public void setHealth(int health)
     {
@@ -21,7 +21,7 @@ public class HealthController : MonoBehaviour
             die();
     }
 
-    public void die()
+    public virtual void die()
     {
         if (!dead)
         {

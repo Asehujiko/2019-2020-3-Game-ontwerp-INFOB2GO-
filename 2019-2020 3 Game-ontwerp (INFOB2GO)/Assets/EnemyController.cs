@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyController : MonoBehaviour
+public class EnemyController : HealthController
 {
     //standard objects
     public Rigidbody rigidbody;
     private float maxRange = 500f;
     private float timer;
+    private SpawnController spawnController;
 
     //player info
     public List<GameObject> seePoint;
@@ -62,6 +63,7 @@ public class EnemyController : MonoBehaviour
         navPoints = FindObjectsOfType<NavigationPoint>();
         turretElevation = new GameObject();
         turretRotation = new GameObject();
+        spawnController = FindObjectOfType<SpawnController>();
     }
 
     void Update()
@@ -74,6 +76,27 @@ public class EnemyController : MonoBehaviour
         Path();
         Target();
         Shoot();
+    }
+
+    public override void die()
+    {
+        if (!dead)
+        {
+            dead = true;
+            if (scrap != null)
+            {
+                Instantiate(scrap, transform.position, transform.rotation);
+            }
+            for (int i = 0; i < destroyedParts.Count; i++)
+            {
+                Instantiate(destroyedParts[i], transform.position, transform.rotation);
+            }
+            if (spawnController != null)
+            {
+                spawnController.Died();
+            }
+            Destroy(gameObject);
+        }
     }
 
     private void Shoot()
@@ -216,7 +239,8 @@ public class EnemyController : MonoBehaviour
     private void MovePath()
     {
         if (pathindex < currentPath.Length)
-        {
+        {            //debug
+            /*
             for (int i = pathindex; i < currentPath.Length; i++)
             {
                 if (i == pathindex)
@@ -228,6 +252,7 @@ public class EnemyController : MonoBehaviour
                     Debug.DrawLine(currentPath[i], currentPath[i - 1], Color.red);
                 }
             }
+            */
             if (Vector3.Distance(currentPath[pathindex], transform.position) < 1)
             {
                 pathindex++;

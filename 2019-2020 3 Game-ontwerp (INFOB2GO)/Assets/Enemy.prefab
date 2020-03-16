@@ -272,7 +272,6 @@ GameObject:
   m_Component:
   - component: {fileID: 451512236075919883}
   - component: {fileID: 5936516882102524563}
-  - component: {fileID: -4310765856628117288}
   - component: {fileID: 4902358342869343820}
   - component: {fileID: 1285448265194933359}
   - component: {fileID: 6153817663871576190}
@@ -315,6 +314,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d6617ff6233ab4694acc6b9ceb892d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrap: {fileID: 2358608120228197252, guid: 40a9a5ef67ebe9f4aa00cc9a31186bb9, type: 3}
+  destroyedParts: []
+  health: 100
   rigidbody: {fileID: 4902358342869343820}
   seePoint:
   - {fileID: 3978035223713745455}
@@ -334,21 +336,6 @@ MonoBehaviour:
   ignoreLayer:
     serializedVersion: 2
     m_Bits: 512
---- !u!114 &-4310765856628117288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4326724344726223400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a3868cf40c54d04c80324627124ea66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scrap: {fileID: 2358608120228197252, guid: 40a9a5ef67ebe9f4aa00cc9a31186bb9, type: 3}
-  destroyedParts: []
-  health: 100
 --- !u!54 &4902358342869343820
 Rigidbody:
   m_ObjectHideFlags: 0

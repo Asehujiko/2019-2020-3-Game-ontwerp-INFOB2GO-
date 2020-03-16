@@ -1154,6 +1154,11 @@ PrefabInstance:
       propertyPath: Absolute
       value: 
       objectReference: {fileID: 5885662533138369484}
+    - target: {fileID: 3244510508507115514, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: Relative
+      value: 
+      objectReference: {fileID: 5885662531590598099}
     - target: {fileID: 3244510508544425789, guid: a71d1170ed2e0a34589a1b3955b80d3b,
         type: 3}
       propertyPath: m_Name

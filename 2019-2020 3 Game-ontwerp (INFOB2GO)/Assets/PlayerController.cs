@@ -12,6 +12,8 @@ public class PlayerController : WeaponController
     public GameObject HullProjectileEmitter;
     public GameObject RoofProjectileEmitter;
 
+    private SpawnController spawnController;
+
     public float scale;
 
     public int scrap;
@@ -25,6 +27,8 @@ public class PlayerController : WeaponController
 
     void Start()
     {
+        spawnController = FindObjectOfType<SpawnController>();
+
         scaleChange = new Vector3(scale, scale, scale);
         positionChange = new Vector3(0, scale, 0);
 
@@ -119,6 +123,10 @@ public class PlayerController : WeaponController
 
             if (stage < 10)
                 stage++;
+            if (spawnController != null)
+            {
+                spawnController.Staged(stage);
+            }
         }
     }
 
