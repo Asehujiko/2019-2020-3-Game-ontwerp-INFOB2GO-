@@ -34,7 +34,7 @@ public class MineScript : MonoBehaviour
         Collider[] others = Physics.OverlapSphere(this.transform.position, 5);
         for (int i = 0; i < others.Length; i++)
         {
-            HealthController otherController = others[i].GetComponent<HealthController>();
+            HealthController otherController = others[i].gameObject.transform.root.GetComponent<HealthController>();
 
             if (otherController != null)
             {
