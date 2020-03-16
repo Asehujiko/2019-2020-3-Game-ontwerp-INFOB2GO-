@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 213252369137957151}
   - component: {fileID: 213252369137957148}
   - component: {fileID: 213252369137957149}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: EnergysphereProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

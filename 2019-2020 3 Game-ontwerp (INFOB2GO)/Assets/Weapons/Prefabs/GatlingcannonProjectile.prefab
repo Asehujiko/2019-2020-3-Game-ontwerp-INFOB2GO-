@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5614186771543837801}
   - component: {fileID: 5614186771543837800}
   - component: {fileID: 4482210009781556265}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: GatlingcannonProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -19,7 +19,7 @@ public class ProjectileScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        GameObject other = collision.gameObject;
+        GameObject other = collision.gameObject.transform.root.gameObject;
         HealthController otherController = other.GetComponent<HealthController>();
 
         if (otherController != null)

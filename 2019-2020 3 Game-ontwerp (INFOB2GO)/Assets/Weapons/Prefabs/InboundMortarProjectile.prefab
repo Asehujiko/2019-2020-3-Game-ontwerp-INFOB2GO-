@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3219729410622391424}
   - component: {fileID: 3138509812406109661}
   - component: {fileID: 7406649958965583416}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: InboundMortarProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

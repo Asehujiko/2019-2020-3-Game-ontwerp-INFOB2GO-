@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1966279050000170901}
   - component: {fileID: 3650868496734574409}
   - component: {fileID: -6049977604739154293}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: AutocannonProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

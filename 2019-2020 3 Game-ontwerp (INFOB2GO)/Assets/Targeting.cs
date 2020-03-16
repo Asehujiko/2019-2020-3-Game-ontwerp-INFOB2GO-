@@ -10,6 +10,7 @@ public class Targeting : MonoBehaviour
     public GameObject reticle;
 
     public LayerMask ignoreLayer;
+    public LayerMask ingoreLayer2;
 
     float maxRange = 500f;
     void Start()
@@ -36,7 +37,7 @@ public class Targeting : MonoBehaviour
 
         RaycastHit hit;
         Vector3 hitlocation;
-        if (Physics.Raycast(ray, out hit, maxRange, ~ignoreLayer))
+        if (Physics.Raycast(ray, out hit, maxRange, ~(ignoreLayer+ ingoreLayer2)))
         {
             hitlocation = hit.point;
         }

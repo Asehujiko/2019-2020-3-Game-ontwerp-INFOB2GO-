@@ -41,7 +41,10 @@ public class EnemyController : MonoBehaviour
     private GameObject turretRotation;
     private GameObject turretElevation;
 
-    public int test;
+    //weapons
+    public EnemyWeaponController weaponController;
+    private GameObject shootdirection;
+    public LayerMask ignoreLayer;
 
     private void Start()
     {
@@ -59,6 +62,7 @@ public class EnemyController : MonoBehaviour
         navPoints = FindObjectsOfType<NavigationPoint>();
         turretElevation = new GameObject();
         turretRotation = new GameObject();
+        shootdirection = new GameObject();
     }
 
     void Update()
@@ -70,6 +74,38 @@ public class EnemyController : MonoBehaviour
 
         Path();
         Target();
+        Shoot();
+    }
+
+    private void Shoot()
+    {
+        if (!CheckSeePlayer())
+        {
+            return;
+        }
+
+        float targetrotation = Rotation360(turretRotation.transform.eulerAngles.y);
+        float ownrotation = Rotation360(turretRotator.transform.localEulerAngles.y);
+
+        if (Mathf.Abs(Rotation360(targetrotation - ownrotation)) < 10)
+        {
+            Ray ray = new Ray();
+            ray.origin = turretElevator.transform.position;
+            ray.direction = turretElevator.transform.forward;
+
+            RaycastHit hit;
+            Vector3 hitlocation;
+            if (Physics.Raycast(ray, out hit, maxRange, ~ignoreLayer))
+            {
+                hitlocation = hit.point;
+            }
+            else
+            {
+                hitlocation = turretElevator.transform.forward * maxRange + turretElevator.transform.position;
+            }
+
+            weaponController.Shoot(hitlocation);
+        }
     }
 
     //target the player tank

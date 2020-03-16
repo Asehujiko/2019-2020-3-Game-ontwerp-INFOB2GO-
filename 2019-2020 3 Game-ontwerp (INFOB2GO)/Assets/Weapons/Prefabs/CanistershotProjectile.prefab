@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4138244332656932826}
   - component: {fileID: 4005443967000046651}
   - component: {fileID: 4423635189139926419}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: CanistershotProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

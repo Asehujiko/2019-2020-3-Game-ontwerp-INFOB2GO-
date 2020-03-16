@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 836515310748960705}
   - component: {fileID: -3640544902670857229}
   - component: {fileID: -8226529338466061933}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: DronebomberProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3697355730694032968}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BombEmitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}

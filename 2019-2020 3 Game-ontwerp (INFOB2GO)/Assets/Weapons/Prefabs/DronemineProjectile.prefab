@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6912665087319533086}
   - component: {fileID: 3894443700055985061}
   - component: {fileID: -482292390719396329}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: DronemineProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

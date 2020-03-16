@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1461096877763997426}
   - component: {fileID: 1461096877763997427}
   - component: {fileID: 2811765762430558379}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: OutboundMortarProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
