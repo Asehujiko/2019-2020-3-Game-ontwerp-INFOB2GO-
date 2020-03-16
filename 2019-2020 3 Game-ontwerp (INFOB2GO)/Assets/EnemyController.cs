@@ -36,6 +36,7 @@ public class EnemyController : MonoBehaviour
     //targeting
     public float turretRotatorSpeed = 90f;
     public float turretElevetorSpeed = 45f;
+    public LayerMask ignoreseeLayer;
     public GameObject turretRotator;
     public GameObject turretElevator;
     private GameObject turretRotation;
@@ -43,7 +44,6 @@ public class EnemyController : MonoBehaviour
 
     //weapons
     public EnemyWeaponController weaponController;
-    private GameObject shootdirection;
     public LayerMask ignoreLayer;
 
     private void Start()
@@ -62,7 +62,6 @@ public class EnemyController : MonoBehaviour
         navPoints = FindObjectsOfType<NavigationPoint>();
         turretElevation = new GameObject();
         turretRotation = new GameObject();
-        shootdirection = new GameObject();
     }
 
     void Update()
@@ -95,7 +94,7 @@ public class EnemyController : MonoBehaviour
 
             RaycastHit hit;
             Vector3 hitlocation;
-            if (Physics.Raycast(ray, out hit, maxRange, ~ignoreLayer))
+            if (Physics.Raycast(ray, out hit, maxRange, ~(ignoreLayer + ignoreseeLayer)))
             {
                 hitlocation = hit.point;
             }
@@ -313,7 +312,7 @@ public class EnemyController : MonoBehaviour
             seePoint[i].transform.LookAt(player.transform.position);
 
             RaycastHit hit;
-            if (Physics.Raycast(seePoint[i].transform.position, seePoint[i].transform.forward, out hit, maxRange))
+            if (Physics.Raycast(seePoint[i].transform.position, seePoint[i].transform.forward, out hit, maxRange, ~(ignoreseeLayer + ignoreLayer)))
             {
                 GameObject hitobject = hit.collider.transform.root.gameObject;
                 PlayerController player = hitobject.GetComponent<PlayerController>();

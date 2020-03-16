@@ -325,6 +325,9 @@ MonoBehaviour:
   rotationSpeed: 3
   turretRotatorSpeed: 90
   turretElevetorSpeed: 45
+  ignoreseeLayer:
+    serializedVersion: 2
+    m_Bits: 1024
   turretRotator: {fileID: 8313242351551650371}
   turretElevator: {fileID: 6599489204652991024}
   weaponController: {fileID: 1285448265194933359}
