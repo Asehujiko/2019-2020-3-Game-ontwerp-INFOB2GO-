@@ -19,6 +19,7 @@ public class PlayerController : WeaponController
     public int scrap;
     public int health = 100;
     public int maxhealth = 100;
+    public int totalscrap;
 
     private Vector3 scaleChange;
     private Vector3 positionChange;
@@ -115,6 +116,7 @@ public class PlayerController : WeaponController
     public void GetScrap()
     {
         scrap++;
+        totalscrap++;
         if (scrap >= stage)
         {
             scrap = 0;
