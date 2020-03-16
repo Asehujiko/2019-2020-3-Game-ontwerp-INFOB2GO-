@@ -9,15 +9,15 @@ public class PlayerHighScore : MonoBehaviour
     private List<int> HighScoreList = new List<int>();
     private List<string> HighScoreNameList = new List<string>();
 
-    private PlayerScrap GetScrap;
+    private PlayerController GetScrap;
     private int scrap;
     private string PlayerName = "Tank";
 
     // Start is called before the first frame update
     void Start()
     {
-        GetScrap = FindObjectOfType<PlayerScrap>();
-        scrap = GetScrap.TotalScrap;
+        GetScrap = FindObjectOfType<PlayerController>();
+        scrap = GetScrap.totalscrap;
         Cursor.lockState = CursorLockMode.None;
     }
 

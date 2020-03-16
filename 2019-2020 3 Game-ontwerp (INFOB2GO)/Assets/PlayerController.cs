@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     public float scale;
 
     public int scrap;
+    public int totalscrap;
 
     private Vector3 scaleChange;
     private Vector3 positionChange;
@@ -125,6 +126,7 @@ public class PlayerController : MonoBehaviour
     public void GetScrap()
     {
         scrap++;
+        totalscrap++;
         if (scrap >= stage)
         {
             scrap = 0;
