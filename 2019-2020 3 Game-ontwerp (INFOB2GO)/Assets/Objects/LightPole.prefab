@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &8807819194405490017
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31098110674699759}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.25, y: 4, z: 0.25}
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!114 &3704681983089078013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16,19 +29,6 @@ MonoBehaviour:
   destroyedParts:
   - {fileID: 7461551930561999185, guid: 260b9fc2d247d0f47b8b2feb46df5f6c, type: 3}
   health: 10
---- !u!65 &8807819194405490017
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 31098110674699759}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.25, y: 4, z: 0.25}
-  m_Center: {x: 0, y: 2, z: 0}
 --- !u!1001 &8309025345999002854
 PrefabInstance:
   m_ObjectHideFlags: 0

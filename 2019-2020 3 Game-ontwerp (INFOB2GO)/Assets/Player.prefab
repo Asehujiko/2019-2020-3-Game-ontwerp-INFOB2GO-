@@ -376,6 +376,7 @@ MonoBehaviour:
   scrap: 0
   health: 100
   maxhealth: 100
+  totalscrap: 0
   stage: 1
 --- !u!54 &4224066120371131726
 Rigidbody:
@@ -1031,7 +1032,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7187061256674625298}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.625}
+  m_LocalPosition: {x: 0, y: 0.47, z: 1.076}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6325873553560275292}
@@ -1443,6 +1444,11 @@ PrefabInstance:
         type: 3}
       propertyPath: ingoreLayer2.m_Bits
       value: 2048
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244510509904094747, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: ignoreLayer.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 3244510509970732860, guid: a71d1170ed2e0a34589a1b3955b80d3b,
         type: 3}
