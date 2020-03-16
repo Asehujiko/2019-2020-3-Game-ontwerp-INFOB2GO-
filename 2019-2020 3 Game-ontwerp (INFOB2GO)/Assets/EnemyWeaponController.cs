@@ -19,7 +19,7 @@ public class EnemyWeaponController : WeaponController
         {
             weapontype = Random.Range(player.stage - 2, player.stage + 3);
         }
-        Mathf.Clamp(weapontype, 1, 10);
+        weapontype = Mathf.Clamp(weapontype, 1, 10);
     }
 
     public void Shoot(Vector3 targetlocation)
