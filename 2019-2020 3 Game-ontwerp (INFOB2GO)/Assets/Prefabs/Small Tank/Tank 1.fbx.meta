@@ -1,0 +1,273 @@
+fileFormatVersion: 2
+guid: 4a41840e27b67bc44ad5f35b291f27f1
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      74: -3993800983926512392
+    second: TurretSmall|BezierCircleAction
+  - first:
+      74: -4588576283417957837
+    second: TurretSmall|BezierCircleAction.001
+  - first:
+      74: 5315249052277395893
+    second: TurretSmall|Cube.001Action
+  - first:
+      74: 7619121598887955507
+    second: TurretSmall|Cube.002Action
+  - first:
+      74: -7788518541424924236
+    second: TurretSmall|Cube.002Action.001
+  - first:
+      74: 3112552151736197204
+    second: TurretSmall|CylinderAction
+  - first:
+      74: -1796203280400491117
+    second: TurretSmall|CylinderAction.001
+  - first:
+      74: -7741172212963737305
+    second: LinkerTrack|BezierCircleAction
+  - first:
+      74: -2994442404766410397
+    second: LinkerTrack|BezierCircleAction.001
+  - first:
+      74: -6636168258509562819
+    second: LinkerTrack|Cube.001Action
+  - first:
+      74: 2775415503753573499
+    second: LinkerTrack|Cube.002Action
+  - first:
+      74: -5221664654921520982
+    second: LinkerTrack|Cube.002Action.001
+  - first:
+      74: 2817244654309778897
+    second: LinkerTrack|CylinderAction
+  - first:
+      74: -6935817386990847183
+    second: LinkerTrack|CylinderAction.001
+  - first:
+      74: 2106206013536685938
+    second: BezierCircle|BezierCircleAction
+  - first:
+      74: -628603867944713628
+    second: BezierCircle|BezierCircleAction.001
+  - first:
+      74: -135558657491497946
+    second: BezierCircle|Cube.001Action
+  - first:
+      74: -8462777834183322949
+    second: BezierCircle|Cube.002Action
+  - first:
+      74: 5609815795450517966
+    second: BezierCircle|Cube.002Action.001
+  - first:
+      74: 5011853926211949439
+    second: BezierCircle|CylinderAction
+  - first:
+      74: 2347932633282681039
+    second: BezierCircle|CylinderAction.001
+  - first:
+      74: 7541184466759015409
+    second: RechterTrack|BezierCircleAction
+  - first:
+      74: -9180387636510245701
+    second: RechterTrack|BezierCircleAction.001
+  - first:
+      74: 8243085184256834194
+    second: RechterTrack|Cube.001Action
+  - first:
+      74: -1273619384619315549
+    second: RechterTrack|Cube.002Action
+  - first:
+      74: 5546290378661884893
+    second: RechterTrack|Cube.002Action.001
+  - first:
+      74: -4880068744291231501
+    second: RechterTrack|CylinderAction
+  - first:
+      74: 1635842167625243786
+    second: RechterTrack|CylinderAction.001
+  - first:
+      74: -232409206912074659
+    second: BezierCircle.001|BezierCircleAction
+  - first:
+      74: 6929345677925808703
+    second: BezierCircle.001|BezierCircleAction.001
+  - first:
+      74: -2555563723203838330
+    second: BezierCircle.001|Cube.001Action
+  - first:
+      74: 498333083611762848
+    second: BezierCircle.001|Cube.002Action
+  - first:
+      74: -4652696151161871128
+    second: BezierCircle.001|Cube.002Action.001
+  - first:
+      74: -5343836923448035562
+    second: BezierCircle.001|CylinderAction
+  - first:
+      74: 9064316932438649266
+    second: BezierCircle.001|CylinderAction.001
+  - first:
+      74: -5475379443577382727
+    second: Laser|BezierCircleAction
+  - first:
+      74: 3654308550268299162
+    second: Laser|BezierCircleAction.001
+  - first:
+      74: 7890483959848768694
+    second: Laser|Cube.001Action
+  - first:
+      74: 5305824102099275759
+    second: Laser|Cube.002Action
+  - first:
+      74: 399746836340198900
+    second: Laser|Cube.002Action.001
+  - first:
+      74: -7977479308257158294
+    second: Laser|CylinderAction
+  - first:
+      74: 1265451568522798345
+    second: Laser|CylinderAction.001
+  - first:
+      74: -4622259443135980585
+    second: Auto Cannon|BezierCircleAction
+  - first:
+      74: -1967532160535436694
+    second: Auto Cannon|BezierCircleAction.001
+  - first:
+      74: -3270555754149881193
+    second: Auto Cannon|Cube.001Action
+  - first:
+      74: 3014006243848135677
+    second: Auto Cannon|Cube.002Action
+  - first:
+      74: -1398681986142915412
+    second: Auto Cannon|Cube.002Action.001
+  - first:
+      74: 5907877841218095569
+    second: Auto Cannon|CylinderAction
+  - first:
+      74: 8336929069072258342
+    second: Auto Cannon|CylinderAction.001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Auto Cannon
+    second: {fileID: 2100000, guid: ba8870cb5327c04499db9ce27466ee5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Laser
+    second: {fileID: 2100000, guid: ca050c089963ee2459f5197fd7fe0aa4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 7a84f33ef7545f843932cf95adabf764, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Track Colour
+    second: {fileID: 2100000, guid: ddab9a8e877041f4eb09202c58403e1b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Track Colour.001
+    second: {fileID: 2100000, guid: af20b7300678d2249b001031740d2efa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Turret colour
+    second: {fileID: 2100000, guid: 8beac434b9b632a4f93b0c5cc4fe4dcd, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
