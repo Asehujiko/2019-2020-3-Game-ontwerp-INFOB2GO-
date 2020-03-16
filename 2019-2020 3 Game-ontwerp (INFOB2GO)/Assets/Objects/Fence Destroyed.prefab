@@ -53,6 +53,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8470045053010906745, guid: 102189c210143834a86ac116db31f5b8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -5259225927154676129, guid: 102189c210143834a86ac116db31f5b8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -4425609515867240179, guid: 102189c210143834a86ac116db31f5b8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 102189c210143834a86ac116db31f5b8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -111,7 +126,12 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 102189c210143834a86ac116db31f5b8,
         type: 3}
       propertyPath: m_Name
-      value: FenceDestroyed
+      value: Fence Destroyed
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 102189c210143834a86ac116db31f5b8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 102189c210143834a86ac116db31f5b8, type: 3}
