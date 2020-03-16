@@ -386,6 +386,9 @@ MonoBehaviour:
   weapontype: 0
   weaponEmitter: {fileID: 2364091396681687762}
   morterEmitter: {fileID: 5159030115318671962}
+  ignoreWeaponMask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!120 &6153817663871576190
 LineRenderer:
   m_ObjectHideFlags: 0

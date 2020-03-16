@@ -162,7 +162,7 @@ public class WeaponController : MonoBehaviour
         }
     }
 
-    protected void ShootEnergysphere(GameObject direction)
+    protected void ShootEnergysphere(GameObject direction, LayerMask ignorelayer)
     {
         if (roofLastFired >= 1)
         {
@@ -170,16 +170,18 @@ public class WeaponController : MonoBehaviour
 
             GameObject roofProjectile = Instantiate(energysphereProjectile, direction.transform.position, direction.transform.rotation) as GameObject;
             roofProjectile.GetComponent<FloaterScript>().setDamage(1);
+            roofProjectile.GetComponent<FloaterScript>().ignorelayer = ignorelayer;
         }
     }
 
-    protected void ShootDronebomber(GameObject direction)
+    protected void ShootDronebomber(GameObject direction, LayerMask ignorelayer)
     {
         if (roofLastFired >= 1)
         {
             roofLastFired = 0;
             GameObject roofProjectile = Instantiate(dronebomberProjectile, direction.transform.position, direction.transform.rotation) as GameObject;
             roofProjectile.GetComponent<DroneScript>().setDamage(100);
+            roofProjectile.GetComponent<DroneScript>().ignorelayer = ignorelayer;
         }
     }
 

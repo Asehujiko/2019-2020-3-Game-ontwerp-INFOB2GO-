@@ -8,6 +8,7 @@ public class EnemyWeaponController : WeaponController
     public int weapontype = 0;
     public GameObject weaponEmitter;
     public GameObject morterEmitter;
+    public LayerMask ignoreWeaponMask;
 
     //player info
     private PlayerController player;
@@ -48,7 +49,7 @@ public class EnemyWeaponController : WeaponController
                 ShootMortar(morterEmitter,targetlocation);
                 break;
             case 8:
-                ShootEnergysphere(weaponEmitter);
+                ShootEnergysphere(weaponEmitter, ignoreWeaponMask);
                 break;
             case 9:
                 ShootLaser(weaponEmitter);

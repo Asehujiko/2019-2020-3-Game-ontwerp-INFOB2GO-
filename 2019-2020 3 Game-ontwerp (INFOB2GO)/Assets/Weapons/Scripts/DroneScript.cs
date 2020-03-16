@@ -7,6 +7,7 @@ public class DroneScript : MonoBehaviour
     public GameObject Explosion;
     public GameObject BombEmitter;
     public GameObject dronemineProjectile;
+    public LayerMask ignorelayer;
 
     public float movementSpeed;
     public float height;
@@ -32,6 +33,7 @@ public class DroneScript : MonoBehaviour
             droneLastFired = 0;
             GameObject bombProjectile = Instantiate(dronemineProjectile, BombEmitter.transform.position, BombEmitter.transform.rotation) as GameObject;
             bombProjectile.GetComponent<MineScript>().setDamage(500);
+            bombProjectile.GetComponent<MineScript>().ignorelayer = ignorelayer;
         }
     }
 

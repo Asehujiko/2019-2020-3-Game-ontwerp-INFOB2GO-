@@ -26,6 +26,8 @@ public class PlayerController : WeaponController
 
     public int stage = 1;
 
+    public LayerMask ignoreWeaponMask;
+
     void Start()
     {
         spawnController = FindObjectOfType<SpawnController>();
@@ -89,12 +91,12 @@ public class PlayerController : WeaponController
 
             if (stage == 8)
             {
-                ShootEnergysphere(RoofProjectileEmitter);
+                ShootEnergysphere(RoofProjectileEmitter, ignoreWeaponMask);
             }
 
             if (stage == 9)
             {
-                ShootDronebomber(RoofProjectileEmitter);
+                ShootDronebomber(RoofProjectileEmitter, ignoreWeaponMask);
             }
 
             if (stage == 10)

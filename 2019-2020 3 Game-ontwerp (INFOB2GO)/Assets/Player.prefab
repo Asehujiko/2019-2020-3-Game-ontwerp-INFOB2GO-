@@ -378,6 +378,9 @@ MonoBehaviour:
   maxhealth: 100
   totalscrap: 0
   stage: 1
+  ignoreWeaponMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!54 &4224066120371131726
 Rigidbody:
   m_ObjectHideFlags: 0

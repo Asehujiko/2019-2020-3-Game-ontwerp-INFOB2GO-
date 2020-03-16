@@ -7,6 +7,7 @@ public class FloaterScript : MonoBehaviour
     public GameObject ArcRenderer;
     public float movementSpeed;
     public int damage;
+    public LayerMask ignorelayer;
 
     void Start()
     {
@@ -22,7 +23,7 @@ public class FloaterScript : MonoBehaviour
     {
         transform.Translate(0, 0, movementSpeed * Time.deltaTime);
 
-        Collider[] others = Physics.OverlapSphere(this.transform.position, 5);
+        Collider[] others = Physics.OverlapSphere(this.transform.position, 5, ~ignorelayer);
         for (int i = 0; i < others.Length; i++)
         {
             HealthController otherController = others[i].gameObject.transform.root.GetComponent<HealthController>();

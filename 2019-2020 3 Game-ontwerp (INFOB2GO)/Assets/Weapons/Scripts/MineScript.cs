@@ -5,6 +5,7 @@ using UnityEngine;
 public class MineScript : MonoBehaviour
 {
     public GameObject Explosion;
+    public LayerMask ignorelayer;
 
     public int damage;
 
@@ -31,7 +32,7 @@ public class MineScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Collider[] others = Physics.OverlapSphere(this.transform.position, 5);
+        Collider[] others = Physics.OverlapSphere(this.transform.position, 5, ~ignorelayer);
         for (int i = 0; i < others.Length; i++)
         {
             HealthController otherController = others[i].gameObject.transform.root.GetComponent<HealthController>();
