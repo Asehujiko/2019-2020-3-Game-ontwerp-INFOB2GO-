@@ -15,6 +15,18 @@ public class PlayerController : WeaponController
     private SpawnController spawnController;
     public HealthController healthController;
 
+    private AudioSource audioSource;
+    public AudioClip laserShot;
+    public AudioClip autoCannonShot;
+    public AudioClip canisterShot;
+    public AudioClip gatlingShot;
+    public AudioClip railgunShot;
+    public AudioClip physicsShot;
+    public AudioClip mortierShot;
+    public AudioClip energyShot;
+    public AudioClip engineSound;
+    public AudioClip tracksSound;
+
     public float scale;
 
     public int scrap;
@@ -30,6 +42,8 @@ public class PlayerController : WeaponController
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         healthController.health = maxhealth;
         spawnController = FindObjectOfType<SpawnController>();
 
@@ -47,7 +61,6 @@ public class PlayerController : WeaponController
         base.Update();
         transform.Translate(0, 0, Input.GetAxis("Vertical") * movementSpeed * Time.deltaTime);
         transform.Rotate(0, Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime, 0);
-
         HandleInput();
     }
 
@@ -55,18 +68,33 @@ public class PlayerController : WeaponController
     {
         if (Input.GetMouseButton(0))
         {
+
             if (stage == 1)
                 ShootLaser(TurretProjectileEmitter);
 
-            if (stage >= 2 && stage <= 3)
+            else if (stage >= 2 && stage <= 3)
+            { 
                 ShootAutocannon(TurretProjectileEmitter);
-
-            if (stage == 4)
+                if(turretLastFired == 0)
+                {
+                    audioSource.PlayOneShot(autoCannonShot);
+                }
+            }
+            else if (stage == 4)
+            {
                 ShootGatlingcannon(TurretProjectileEmitter);
-
-            if (stage >= 5)
+                if (turretLastFired == 0)
+                {
+                    audioSource.PlayOneShot(gatlingShot);
+                }
+            }
+            else if (stage >= 5)
             {
                 ShootRailgun(TurretProjectileEmitter);
+                if (turretLastFired == 0)
+                {
+                    audioSource.PlayOneShot(railgunShot);
+                }
             }
         }
 
@@ -75,11 +103,19 @@ public class PlayerController : WeaponController
             if (stage >= 3 && stage <= 5)
             {
                 ShootCanistershot(HullProjectileEmitter);
+                if (hullLastFired == 0)
+                {
+                    audioSource.PlayOneShot(canisterShot);
+                }
             }
 
             if (stage >= 6)
             {
                 ShootBouncer(HullProjectileEmitter);
+                if (hullLastFired == 0)
+                {
+                    audioSource.PlayOneShot(physicsShot);
+                }
             }
         }
 
@@ -87,11 +123,15 @@ public class PlayerController : WeaponController
         {
             if (stage == 7)
             {
+                audioSource.clip = mortierShot;
+                audioSource.Play();
                 ShootMortar(RoofProjectileEmitter,cameraController.aimingPoint);
             }
 
             if (stage == 8)
             {
+                audioSource.clip = energyShot;
+                audioSource.Play();
                 ShootEnergysphere(RoofProjectileEmitter, ignoreWeaponMask);
             }
 

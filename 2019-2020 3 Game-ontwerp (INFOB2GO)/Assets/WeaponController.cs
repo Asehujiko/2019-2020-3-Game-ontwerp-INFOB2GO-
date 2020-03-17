@@ -23,10 +23,10 @@ public class WeaponController : MonoBehaviour
     //public GameObject HullProjectileEmitter;
     //public GameObject RoofProjectileEmitter;
 
-    protected float turretLastFired = 0;
-    protected float hullLastFired = 0;
-    protected float roofLastFired = 0;
-    protected float sonicCharge = 0;
+    public float turretLastFired = 0;
+    public float hullLastFired = 0;
+    public float roofLastFired = 0;
+    public float sonicCharge = 0;
 
     protected virtual void Update()
     {
