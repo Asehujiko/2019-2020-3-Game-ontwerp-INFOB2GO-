@@ -101,7 +101,7 @@ public class PlayerController : WeaponController
 
             if (stage == 10)
             {
-                ShootSonicweapon();
+                ShootSonicweapon(ignoreWeaponMask);
             }
         }
         else

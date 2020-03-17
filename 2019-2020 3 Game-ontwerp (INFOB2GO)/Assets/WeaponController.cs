@@ -185,12 +185,12 @@ public class WeaponController : MonoBehaviour
         }
     }
 
-    protected void ShootSonicweapon()
+    protected void ShootSonicweapon(LayerMask ignorelayer)
     {
         sonicCharge += Time.deltaTime;
         if (sonicCharge >= 3)
         {
-            Collider[] others = Physics.OverlapSphere(this.transform.position, 100);
+            Collider[] others = Physics.OverlapSphere(this.transform.position, 100, ~ignorelayer);
             for (int i = 0; i < others.Length; i++)
             {
                 HealthController otherController = others[i].gameObject.transform.root.GetComponent<HealthController>();
