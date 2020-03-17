@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class EnemyController : HealthController
 {
+    public AudioClip clip;
+    
     //standard objects
     public Rigidbody rigidbody;
     private float maxRange = 500f;
@@ -82,6 +84,8 @@ public class EnemyController : HealthController
     {
         if (!dead)
         {
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.PlayOneShot(clip);
             dead = true;
             if (scrap != null)
             {
@@ -95,8 +99,14 @@ public class EnemyController : HealthController
             {
                 spawnController.Died();
             }
-            Destroy(gameObject);
+            StartCoroutine(WaitDestroy());
         }
+    }
+
+    IEnumerator WaitDestroy()
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(gameObject);
     }
 
     private void Shoot()
