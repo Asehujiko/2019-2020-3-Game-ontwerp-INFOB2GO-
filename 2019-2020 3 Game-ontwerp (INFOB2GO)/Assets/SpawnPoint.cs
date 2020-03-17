@@ -9,6 +9,7 @@ public class SpawnPoint : MonoBehaviour
     private PlayerController player;
     private float maxRange = 500f;
     public GameObject Enemy;
+    public Camera camera;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class SpawnPoint : MonoBehaviour
 
     public bool AreaClear()
     {
+        player = FindObjectOfType<PlayerController>();
         Collider[] objects = Physics.OverlapBox(transform.position + new Vector3(0, 1, 0), new Vector3(1, 1, 1.5f));
         for (int i = 0; i < objects.Length; i++)
         {
@@ -38,15 +40,16 @@ public class SpawnPoint : MonoBehaviour
         {
             return true;
         }
+        camera = Camera.main;
 
-        if (Vector3.Distance(transform.position, player.transform.position) < 20)
+        if (Vector3.Distance(transform.position, player.transform.position) < 40)
         {
             return false;
         }
 
         for (int i = 0; i < seepoints.Length; i++)
         {
-            seepoints[i].transform.LookAt(player.transform.position);
+            seepoints[i].transform.LookAt(camera.transform.position);
             Ray ray = new Ray();
             ray.origin = seepoints[i].transform.position;
             ray.direction = seepoints[i].transform.forward;
