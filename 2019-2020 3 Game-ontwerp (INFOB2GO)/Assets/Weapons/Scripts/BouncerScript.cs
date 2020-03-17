@@ -19,8 +19,8 @@ public class BouncerScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        GameObject other = collision.gameObject.transform.root.gameObject;
-        HealthController otherController = other.GetComponent<HealthController>();
+        GameObject other = collision.gameObject.gameObject;
+        HealthController otherController = FindParentWithHealth(other);
 
         if (otherController != null)
         {
@@ -28,5 +28,25 @@ public class BouncerScript : MonoBehaviour
             GameObject explosion = Instantiate(Explosion, transform.position, transform.rotation) as GameObject;
         }
 
+    }
+
+    public HealthController FindParentWithHealth(GameObject childObject)
+    {
+        Transform t = childObject.transform;
+        int i = 0;
+        if (t.gameObject.GetComponent<HealthController>())
+        {
+            return t.gameObject.GetComponent<HealthController>();
+        }
+        while (t.parent != null)
+        {
+            if (t.parent.gameObject.GetComponent<HealthController>())
+            {
+                Debug.Log(t.parent.name);
+                return t.parent.gameObject.GetComponent<HealthController>();
+            }
+            t = t.parent.transform;
+        }
+        return null; // Could not find a parent with given tag.
     }
 }
