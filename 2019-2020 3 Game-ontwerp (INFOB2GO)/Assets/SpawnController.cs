@@ -7,7 +7,7 @@ public class SpawnController : MonoBehaviour
     private SpawnPoint[] spawnPoints;
     int numerEnemies;
     int playerStage;
-    int maxnumberEnemies;
+    public int maxnumberEnemies;
     float spawntimer;
 
     void Start()

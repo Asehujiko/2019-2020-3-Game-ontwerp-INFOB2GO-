@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
-    public GameObject seepoint;
+    public GameObject[] seepoints;
     private PlayerController player;
     private float maxRange = 500f;
     public GameObject Enemy;
@@ -43,22 +43,25 @@ public class SpawnPoint : MonoBehaviour
             return false;
         }
 
-        seepoint.transform.LookAt(player.transform.position);
-        Ray ray = new Ray();
-        ray.origin = seepoint.transform.position;
-        ray.direction = seepoint.transform.forward;
-
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, maxRange))
+        for (int i = 0; i < seepoints.Length; i++)
         {
-            GameObject hitobject = hit.collider.transform.root.gameObject;
-            PlayerController isplayer = hitobject.GetComponent<PlayerController>();
-            if (isplayer != null)
+            seepoints[i].transform.LookAt(player.transform.position);
+            Ray ray = new Ray();
+            ray.origin = seepoints[i].transform.position;
+            ray.direction = seepoints[i].transform.forward;
+
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, maxRange))
             {
-                return false;
+                GameObject hitobject = hit.collider.transform.root.gameObject;
+                PlayerController isplayer = hitobject.GetComponent<PlayerController>();
+                if (isplayer != null)
+                {
+                    return false;
+                }
             }
-            return true;
         }
+
         return true;
     }
 }
