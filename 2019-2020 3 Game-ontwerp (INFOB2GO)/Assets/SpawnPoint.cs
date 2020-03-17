@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnPoint : MonoBehaviour
 {
     public GameObject[] seepoints;
+    public LayerMask ignoreLayer;
     private PlayerController player;
     private float maxRange = 500f;
     public GameObject Enemy;
@@ -51,7 +52,7 @@ public class SpawnPoint : MonoBehaviour
             ray.direction = seepoints[i].transform.forward;
 
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, maxRange))
+            if (Physics.Raycast(ray, out hit, maxRange, ~ignoreLayer))
             {
                 GameObject hitobject = hit.collider.transform.root.gameObject;
                 PlayerController isplayer = hitobject.GetComponent<PlayerController>();
@@ -61,7 +62,6 @@ public class SpawnPoint : MonoBehaviour
                 }
             }
         }
-
         return true;
     }
 }
