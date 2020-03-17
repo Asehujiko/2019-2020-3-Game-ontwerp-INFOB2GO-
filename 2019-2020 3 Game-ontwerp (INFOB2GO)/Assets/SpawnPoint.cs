@@ -9,11 +9,18 @@ public class SpawnPoint : MonoBehaviour
     private PlayerController player;
     private float maxRange = 500f;
     public GameObject Enemy;
-    public Camera camera;
+    private Camera camera;
+    private Color color;
 
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
+        color = Color.red;
+    }
+
+    void Update()
+    {
+        AreaClear();
     }
 
     public void Spawn()
@@ -27,7 +34,6 @@ public class SpawnPoint : MonoBehaviour
         Collider[] objects = Physics.OverlapBox(transform.position + new Vector3(0, 1, 0), new Vector3(1, 1, 1.5f));
         for (int i = 0; i < objects.Length; i++)
         {
-            Debug.DrawLine(objects[i].transform.position, objects[i].transform.position + new Vector3(0, 1, 0), Color.red);
             HealthController otherController = objects[i].gameObject.transform.root.GetComponent<HealthController>();
 
             if (otherController != null)
@@ -38,12 +44,14 @@ public class SpawnPoint : MonoBehaviour
 
         if (player == null)
         {
+            color = Color.green;
             return true;
         }
         camera = Camera.main;
 
         if (Vector3.Distance(transform.position, player.transform.position) < 40)
         {
+            color = Color.red;
             return false;
         }
 
@@ -58,13 +66,16 @@ public class SpawnPoint : MonoBehaviour
             if (Physics.Raycast(ray, out hit, maxRange, ~ignoreLayer))
             {
                 GameObject hitobject = hit.collider.transform.root.gameObject;
+                Debug.DrawLine(ray.origin, hit.point, color);
                 PlayerController isplayer = hitobject.GetComponent<PlayerController>();
                 if (isplayer != null)
                 {
+                    color = Color.red;
                     return false;
                 }
             }
         }
+        color = Color.green;
         return true;
     }
 }
