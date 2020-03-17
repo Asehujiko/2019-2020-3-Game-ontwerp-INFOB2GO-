@@ -105,7 +105,7 @@ public class EnemyController : HealthController
 
     IEnumerator WaitDestroy()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.5f);
         Destroy(gameObject);
     }
 
