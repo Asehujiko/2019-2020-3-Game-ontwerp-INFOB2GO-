@@ -372,10 +372,11 @@ MonoBehaviour:
   TurretProjectileEmitter: {fileID: 4224066120471234488}
   HullProjectileEmitter: {fileID: 2735556841830608385}
   RoofProjectileEmitter: {fileID: 7187061256674625298}
+  healthController: {fileID: 5405663696623783659}
   scale: 0.25
   scrap: 0
-  health: 100
-  maxhealth: 100
+  health: 1000
+  maxhealth: 1000
   totalscrap: 0
   stage: 1
   ignoreWeaponMask:

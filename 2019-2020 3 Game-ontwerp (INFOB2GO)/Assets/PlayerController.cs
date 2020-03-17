@@ -13,12 +13,12 @@ public class PlayerController : WeaponController
     public GameObject RoofProjectileEmitter;
 
     private SpawnController spawnController;
+    public HealthController healthController;
 
     public float scale;
 
     public int scrap;
-    public int health = 100;
-    public int maxhealth = 100;
+    public int maxhealth = 1000;
     public int totalscrap;
 
     private Vector3 scaleChange;
@@ -30,6 +30,7 @@ public class PlayerController : WeaponController
 
     void Start()
     {
+        healthController.health = maxhealth;
         spawnController = FindObjectOfType<SpawnController>();
 
         scaleChange = new Vector3(scale, scale, scale);
@@ -126,7 +127,11 @@ public class PlayerController : WeaponController
             transform.position += positionChange;
 
             if (stage < 10)
+            {
                 stage++;
+                maxhealth += 100;
+                healthController.health = maxhealth;
+            }
             if (spawnController != null)
             {
                 spawnController.Staged(stage);
@@ -134,37 +139,14 @@ public class PlayerController : WeaponController
         }
     }
 
-    public void getHit(int damage)
-    {
-        health-= damage;
-        if(health <= 0)
-        {
-            if (stage > 1)
-            {
-                stage--;
-                transform.localScale -= scaleChange;
-                transform.position -= positionChange;
-                health = maxhealth;
-            }
-            else
-                die();
-        }
-    }
-
-    public void die()
-    {
-        print("ded");
-        //terug naar het hoofdmenu en zo
-    }
-
     public void repair()
     {
-        if (scrap > 0 && health < maxhealth)
+        if (scrap > 0 && healthController.health < maxhealth)
         {
             scrap--;
-            health += 25;
-            if (health > maxhealth)
-                health = maxhealth;
+            healthController.health += 250;
+            if (healthController.health > maxhealth)
+                healthController.health = maxhealth;
         }
     }
 }
