@@ -38,6 +38,11 @@ public class SpawnPoint : MonoBehaviour
             return true;
         }
 
+        if (Vector3.Distance(transform.position, player.transform.position) < 20)
+        {
+            return false;
+        }
+
         seepoint.transform.LookAt(player.transform.position);
         Ray ray = new Ray();
         ray.origin = seepoint.transform.position;
