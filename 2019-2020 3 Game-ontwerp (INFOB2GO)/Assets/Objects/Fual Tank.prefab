@@ -28,7 +28,8 @@ MonoBehaviour:
   scrap: {fileID: 0}
   destroyedParts:
   - {fileID: 7012834106118309240, guid: cd7e5898f8c6fe64087e2136f4a74bda, type: 3}
-  health: 50
+  - {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
+  health: 0
 --- !u!1001 &8945605009712466338
 PrefabInstance:
   m_ObjectHideFlags: 0
