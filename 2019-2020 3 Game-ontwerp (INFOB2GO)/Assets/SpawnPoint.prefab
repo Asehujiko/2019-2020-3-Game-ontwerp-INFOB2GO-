@@ -262,7 +262,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ded7c3b71b9cc44e9e3662c8df3ff01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seepoint: {fileID: 3294764198525105629}
+  seepoints:
+  - {fileID: 3294764198525105629}
+  - {fileID: 5970606938244266305}
+  - {fileID: 3393966018985898405}
+  - {fileID: 568698683342293420}
+  - {fileID: 5710750507988511909}
+  ignoreLayer:
+    serializedVersion: 2
+    m_Bits: 1024
   Enemy: {fileID: 4326724344726223400, guid: 3f66765cc01cec949955077843cae1e5, type: 3}
 --- !u!1 &3294764200437469402
 GameObject:
