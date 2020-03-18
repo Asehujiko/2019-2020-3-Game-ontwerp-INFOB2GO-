@@ -526,6 +526,8 @@ MonoBehaviour:
     type: 3}
   dronebomberProjectile: {fileID: 3547252426517248942, guid: e8c715527a5933b45a6e395054bf185a,
     type: 3}
+  shockwave: {fileID: 7221878579172248369, guid: a64cf1591060e0f4192bb86fa6672acb,
+    type: 3}
   audioSource: {fileID: 7611694473175053676}
   laserShot: {fileID: 8300000, guid: 1b18f29c8384fcb4fa4a844a59d1125e, type: 3}
   autoCannonShot: {fileID: 8300000, guid: cfa8ea77008122c41b06a738bd270806, type: 3}
