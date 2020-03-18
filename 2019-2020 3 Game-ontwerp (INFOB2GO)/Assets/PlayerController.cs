@@ -27,9 +27,11 @@ public class PlayerController : WeaponController
     public int stage = 1;
 
     public LayerMask ignoreWeaponMask;
+    private LayerMask cameramask;
 
     void Start()
     {
+        cameramask = LayerMask.GetMask("Camera");
         healthController.health = maxhealth;
         healthController.maxheath = maxhealth;
         spawnController = FindObjectOfType<SpawnController>();
@@ -95,17 +97,17 @@ public class PlayerController : WeaponController
 
             if (stage == 8)
             {
-                ShootEnergysphere(RoofProjectileEmitter, ignoreWeaponMask);
+                ShootEnergysphere(RoofProjectileEmitter, ignoreWeaponMask + cameramask);
             }
 
             if (stage == 9)
             {
-                ShootDronebomber(RoofProjectileEmitter, ignoreWeaponMask);
+                ShootDronebomber(RoofProjectileEmitter, ignoreWeaponMask+ cameramask);
             }
 
             if (stage == 10)
             {
-                ShootSonicweapon(ignoreWeaponMask);
+                ShootSonicweapon(ignoreWeaponMask+ cameramask);
             }
         }
         else
