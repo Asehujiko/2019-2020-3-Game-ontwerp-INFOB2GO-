@@ -11,9 +11,6 @@ GameObject:
   - component: {fileID: 1266011833944624191}
   - component: {fileID: 5107278918569924724}
   - component: {fileID: 8144085976815531296}
-  - component: {fileID: 3994491576271083085}
-  - component: {fileID: 1760221603050228576}
-  - component: {fileID: 6902921713552950827}
   m_Layer: 11
   m_Name: AutocannonProjectile
   m_TagString: Untagged
@@ -29,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3073972923224830189}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0178}
+  m_LocalPosition: {x: 0, y: -0, z: 0.0157}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5738944500326820118}
@@ -82,50 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &3994491576271083085
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3073972923224830189}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.015497293
-  m_Height: 0.014329008
-  m_Direction: 1
-  m_Center: {x: -4.656613e-10, y: 0.015754277, z: 0.0039552622}
---- !u!114 &1760221603050228576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3073972923224830189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19d01231dcc395c4b8fcf4b39dfb6bfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Explosion: {fileID: 3662309827168646295, guid: f19c4e96cf4a8304aacca725b49999d4,
-    type: 3}
-  damage: 100
---- !u!114 &6902921713552950827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3073972923224830189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19d01231dcc395c4b8fcf4b39dfb6bfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Explosion: {fileID: 3662309827168646295, guid: f19c4e96cf4a8304aacca725b49999d4,
-    type: 3}
-  damage: 0
 --- !u!1 &4091539921186162163
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,9 +90,9 @@ GameObject:
   - component: {fileID: 5738944500326820118}
   - component: {fileID: 2240025261539506967}
   - component: {fileID: 1776589306352799060}
-  - component: {fileID: 1876354121668233332}
   - component: {fileID: -6049977604739154293}
   - component: {fileID: 7856938652424651392}
+  - component: {fileID: 2519021507077719552}
   m_Layer: 11
   m_Name: AutocannonProjectile
   m_TagString: Untagged
@@ -209,20 +162,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &1876354121668233332
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4091539921186162163}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.015497293
-  m_Height: 0.014329008
-  m_Direction: 1
-  m_Center: {x: -4.656613e-10, y: 0.015754277, z: 0.0039552622}
 --- !u!114 &-6049977604739154293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,7 +169,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4091539921186162163}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19d01231dcc395c4b8fcf4b39dfb6bfc, type: 3}
   m_Name: 
@@ -254,3 +193,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &2519021507077719552
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4091539921186162163}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.015497293
+  m_Height: 0
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}

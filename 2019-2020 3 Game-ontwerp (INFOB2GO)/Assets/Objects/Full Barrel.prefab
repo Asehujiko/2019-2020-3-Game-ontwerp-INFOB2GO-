@@ -479,8 +479,9 @@ MonoBehaviour:
   destroyedParts:
   - {fileID: 4331983109572489616, guid: 573b2438c8180f740aafdccd94c27ff3, type: 3}
   - {fileID: 8356792271258876105, guid: 5bcb6a4f472899140b6f0f690aae7ad4, type: 3}
+  - {fileID: 24162123766252965, guid: 2851e650112785a48a68deacaaabe39a, type: 3}
   health: 10
-  maxhealth: 0
+  maxheath: 0
 --- !u!208 &-5843835954235026258
 NavMeshObstacle:
   m_ObjectHideFlags: 0

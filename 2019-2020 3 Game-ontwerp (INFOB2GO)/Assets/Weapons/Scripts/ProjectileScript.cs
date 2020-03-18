@@ -25,7 +25,7 @@ public class ProjectileScript : MonoBehaviour
         if (otherController != null)
             otherController.getHit(damage);
 
-        GameObject explosion = Instantiate(Explosion, transform.position, transform.rotation) as GameObject;
+        Instantiate(Explosion, transform.position, transform.rotation);  
         Destroy(gameObject);
     }
 

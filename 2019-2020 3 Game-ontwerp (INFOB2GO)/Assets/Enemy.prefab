@@ -318,7 +318,7 @@ MonoBehaviour:
   scrap: {fileID: 2358608120228197252, guid: 40a9a5ef67ebe9f4aa00cc9a31186bb9, type: 3}
   destroyedParts: []
   health: 100
-  maxhealth: 0
+  maxheath: 0
   clip: {fileID: 8300000, guid: a69941da9fa134e43951a772022dcc41, type: 3}
   rigidbody: {fileID: 4902358342869343820}
   seePoint:
