@@ -25,6 +25,8 @@ public class PlayerController : WeaponController
     public GameObject SmallChassis;
     public GameObject LargeChassis;
 
+    public GameObject Camera;
+
     private SpawnController spawnController;
     public HealthController healthController;
 
@@ -183,6 +185,7 @@ public class PlayerController : WeaponController
                     SmallTurret.GetComponent<MeshRenderer>().enabled = false;
                     MortierEmitter.transform.parent.GetComponent<MeshRenderer>().enabled = true;
                     LargeTurret.GetComponent<MeshRenderer>().enabled = true;
+                    Camera.transform.localPosition += new Vector3(0, 1, -1);
                     break;
                 case 8:
                     MortierEmitter.transform.parent.GetComponent<MeshRenderer>().enabled = false;
