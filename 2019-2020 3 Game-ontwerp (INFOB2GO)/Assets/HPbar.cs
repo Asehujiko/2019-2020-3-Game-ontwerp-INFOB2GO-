@@ -17,10 +17,9 @@ public class HPbar : MonoBehaviour
         heathbarstart = healthbar.transform.localPosition.x;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        float offset = (float)maxoffset - (float)maxoffset * (health.health / health.maxheath);
+        float offset = (float)maxoffset - (float)maxoffset * ((float)health.health / (float)health.maxheath);
         overlay.transform.localPosition = new Vector3(overlaystart + offset, overlay.transform.localPosition.y, overlay.transform.localPosition.z);
         healthbar.transform.localPosition = new Vector3(heathbarstart - offset, healthbar.transform.localPosition.y, healthbar.transform.localPosition.z);
     }
