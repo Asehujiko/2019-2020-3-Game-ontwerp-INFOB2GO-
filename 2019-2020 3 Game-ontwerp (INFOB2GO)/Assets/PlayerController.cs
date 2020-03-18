@@ -45,7 +45,6 @@ public class PlayerController : WeaponController
         audioSource = GetComponent<AudioSource>();
 
         healthController.health = maxhealth;
-        healthController.maxhealth = maxhealth;
         spawnController = FindObjectOfType<SpawnController>();
 
         scaleChange = new Vector3(scale, scale, scale);
@@ -171,7 +170,6 @@ public class PlayerController : WeaponController
             {
                 stage++;
                 maxhealth += 100;
-                healthController.maxhealth = maxhealth;
                 healthController.health = maxhealth;
             }
             if (spawnController != null)
