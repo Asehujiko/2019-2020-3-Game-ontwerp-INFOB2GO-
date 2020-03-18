@@ -546,16 +546,6 @@ MonoBehaviour:
   HullProjectileEmitter: {fileID: 2735556841830608385}
   RoofProjectileEmitter: {fileID: 7187061256674625298}
   healthController: {fileID: 5405663696623783659}
-  laserShot: {fileID: 0}
-  autoCannonShot: {fileID: 8300000, guid: cfa8ea77008122c41b06a738bd270806, type: 3}
-  canisterShot: {fileID: 8300000, guid: 6d8ee062df84eb94ebc055c39a770791, type: 3}
-  gatlingShot: {fileID: 8300000, guid: efa5fb86eeb5aaf4993a41bc3af68034, type: 3}
-  railgunShot: {fileID: 8300000, guid: 8ccf953f9f4cdb34f9a4ba25b0e17c53, type: 3}
-  physicsShot: {fileID: 8300000, guid: 6ad8da48aae48ed428d163c551cf82bf, type: 3}
-  mortierShot: {fileID: 8300000, guid: d4b389badccddba4dad7a47d97104118, type: 3}
-  energyShot: {fileID: 8300000, guid: 83010c4dfabbffc45b1027e7c6b146ce, type: 3}
-  engineSound: {fileID: 8300000, guid: e13627960cb5a0a41bec99edcc5047c2, type: 3}
-  tracksSound: {fileID: 8300000, guid: e88f6ef1756c8b446ba90d660cbee70a, type: 3}
   scale: 0.25
   scrap: 0
   maxhealth: 1000
@@ -693,7 +683,7 @@ MonoBehaviour:
   destroyedParts:
   - {fileID: 4224066120371131723}
   health: 100
-  maxhealth: 0
+  maxheath: 0
 --- !u!82 &7611694473175053676
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2037,6 +2027,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4447687638574094371, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 5405663696623783659}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a71d1170ed2e0a34589a1b3955b80d3b, type: 3}
 --- !u!1 &5885662533289001925 stripped

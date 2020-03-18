@@ -8,6 +8,7 @@ public class HealthController : MonoBehaviour
     public List<GameObject> destroyedParts;
     public int health;
     protected bool dead;
+    public int maxheath;
 
     public void setHealth(int health)
     {

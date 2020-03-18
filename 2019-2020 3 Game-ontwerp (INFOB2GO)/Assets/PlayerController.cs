@@ -31,6 +31,7 @@ public class PlayerController : WeaponController
     void Start()
     {
         healthController.health = maxhealth;
+        healthController.maxheath = maxhealth;
         spawnController = FindObjectOfType<SpawnController>();
 
         scaleChange = new Vector3(scale, scale, scale);
@@ -132,6 +133,7 @@ public class PlayerController : WeaponController
             {
                 stage++;
                 maxhealth += 100;
+                healthController.maxheath = maxhealth;
                 healthController.health = maxhealth;
             }
             if (spawnController != null)
