@@ -177,10 +177,35 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 1386254331165032763, guid: 9795bed717103e9478a2aa58f0903433,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 1386254331209419095, guid: 9795bed717103e9478a2aa58f0903433,
         type: 3}
       propertyPath: m_Name
       value: PlasmaExplosionEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386254331209419095, guid: 9795bed717103e9478a2aa58f0903433,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386254331811305749, guid: 9795bed717103e9478a2aa58f0903433,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386254333162303703, guid: 9795bed717103e9478a2aa58f0903433,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386254338729894683, guid: 9795bed717103e9478a2aa58f0903433,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9795bed717103e9478a2aa58f0903433, type: 3}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3078192673988727873}
   - component: {fileID: 8136096916381171714}
   - component: {fileID: 5354872907272645982}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Canister Bullet (multiple)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

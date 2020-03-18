@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2815712033616769971}
   - component: {fileID: 1878162647206351107}
   - component: {fileID: 3842160959573634235}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Mortier Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

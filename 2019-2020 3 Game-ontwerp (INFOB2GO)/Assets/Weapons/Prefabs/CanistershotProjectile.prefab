@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1010574994862218907}
   - component: {fileID: 1757740239498996641}
   - component: {fileID: 7692635748992656369}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Canister Bullet (multiple)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,6 +203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d01231dcc395c4b8fcf4b39dfb6bfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Explosion: {fileID: 3662309827168646295, guid: f19c4e96cf4a8304aacca725b49999d4,
+  Explosion: {fileID: 5364679557247439011, guid: 03bb8c20787577748ae5f99955d45a76,
     type: 3}
   damage: 0

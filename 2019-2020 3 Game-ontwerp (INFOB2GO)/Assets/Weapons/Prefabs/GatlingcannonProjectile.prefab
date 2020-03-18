@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6512838572650854619}
   - component: {fileID: 6664384305096320129}
   - component: {fileID: 567223151175178355}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Gatling Gun Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231137424412515067}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.563, z: 0}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0.557}
   m_LocalScale: {x: 36.001, y: 36.001, z: 36.001}
   m_Children: []
   m_Father: {fileID: 5614186771543837780}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &6664384305096320129
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -203,6 +203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d01231dcc395c4b8fcf4b39dfb6bfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Explosion: {fileID: 3662309827168646295, guid: f19c4e96cf4a8304aacca725b49999d4,
+  Explosion: {fileID: 5364679557247439011, guid: 03bb8c20787577748ae5f99955d45a76,
     type: 3}
   damage: 0

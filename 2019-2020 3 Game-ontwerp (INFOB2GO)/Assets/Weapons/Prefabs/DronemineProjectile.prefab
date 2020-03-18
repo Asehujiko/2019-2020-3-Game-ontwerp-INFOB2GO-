@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6104431801152426950}
   - component: {fileID: 7347051796161726297}
   - component: {fileID: 5091040581398380190}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,5 +207,5 @@ MonoBehaviour:
     type: 3}
   ignorelayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   damage: 0
