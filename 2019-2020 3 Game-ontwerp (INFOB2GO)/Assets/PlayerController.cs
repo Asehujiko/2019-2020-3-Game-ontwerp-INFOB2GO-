@@ -8,9 +8,22 @@ public class PlayerController : WeaponController
     public float rotationSpeed = 10f;
 
     public CameraController cameraController;
-    public GameObject TurretProjectileEmitter;
+    public GameObject LaserEmitter;
+    public GameObject AutoCannonEmitter;
+    public GameObject GatlingGunEmitter;
+    public GameObject RailGunEmitter;
     public GameObject HullProjectileEmitter;
-    public GameObject RoofProjectileEmitter;
+    public GameObject MortierEmitter;
+    public GameObject EnergySphereEmitter;
+    public GameObject LauncherEmitter;
+
+    public GameObject PhysicsShot;
+    public GameObject CanisterShot;
+    public GameObject SmallTurret;
+    public GameObject LargeTurret;
+    public GameObject HullMount;
+    public GameObject SmallChassis;
+    public GameObject LargeChassis;
 
     private SpawnController spawnController;
     public HealthController healthController;
@@ -59,19 +72,19 @@ public class PlayerController : WeaponController
         {
 
             if (stage == 1)
-                ShootLaser(TurretProjectileEmitter);
+                ShootLaser(LaserEmitter);
 
             else if (stage >= 2 && stage <= 3)
             { 
-                ShootAutocannon(TurretProjectileEmitter);
+                ShootAutocannon(AutoCannonEmitter);
             }
             else if (stage == 4)
             {
-                ShootGatlingcannon(TurretProjectileEmitter);
+                ShootGatlingcannon(GatlingGunEmitter);
             }
             else if (stage >= 5)
             {
-                ShootRailgun(TurretProjectileEmitter);
+                ShootRailgun(RailGunEmitter);
             }
         }
 
@@ -92,17 +105,17 @@ public class PlayerController : WeaponController
         {
             if (stage == 7)
             {
-                ShootMortar(RoofProjectileEmitter,cameraController.aimingPoint);
+                ShootMortar(MortierEmitter,cameraController.aimingPoint);
             }
 
             if (stage == 8)
             {
-                ShootEnergysphere(RoofProjectileEmitter, ignoreWeaponMask + cameramask);
+                ShootEnergysphere(EnergySphereEmitter, ignoreWeaponMask + cameramask);
             }
 
             if (stage == 9)
             {
-                ShootDronebomber(RoofProjectileEmitter, ignoreWeaponMask+ cameramask);
+                ShootDronebomber(LauncherEmitter, ignoreWeaponMask+ cameramask);
             }
 
             if (stage == 10)
@@ -141,6 +154,50 @@ public class PlayerController : WeaponController
             if (spawnController != null)
             {
                 spawnController.Staged(stage);
+            }
+            switch(stage)
+            {
+                case 2:
+                    LaserEmitter.transform.parent.GetComponent<MeshRenderer>().enabled = false;
+                    AutoCannonEmitter.transform.parent.GetComponent<MeshRenderer>().enabled = true;
+                    break;
+                case 3:
+                    HullMount.GetComponent<MeshRenderer>().enabled = true;
+                    SmallChassis.GetComponent<MeshRenderer>().enabled = false;
+                    LargeChassis.GetComponent<MeshRenderer>().enabled = true;
+                    CanisterShot.GetComponent<MeshRenderer>().enabled = true;
+                    break;
+                case 4:
+                    AutoCannonEmitter.transform.parent.GetComponent<MeshRenderer>().enabled = false;
+                    GatlingGunEmitter.transform.parent.GetComponent<MeshRenderer>().enabled = true; 
+                    break;
+                case 5:
+                    GatlingGunEmitter.transform.parent.GetComponent<MeshRenderer>().enabled = false;
+                    RailGunEmitter.transform.parent.GetComponent<MeshRenderer>().enabled = true;
+                    break;
+                case 6:
+                    CanisterShot.GetComponent<MeshRenderer>().enabled = false;
+                    PhysicsShot.GetComponent<MeshRenderer>().enabled = true;
+                    break;
+                case 7:
+                    SmallTurret.GetComponent<MeshRenderer>().enabled = false;
+                    MortierEmitter.transform.parent.GetComponent<MeshRenderer>().enabled = true;
+                    LargeTurret.GetComponent<MeshRenderer>().enabled = true;
+                    break;
+                case 8:
+                    MortierEmitter.transform.parent.GetComponent<MeshRenderer>().enabled = false;
+                    EnergySphereEmitter.transform.parent.GetComponent<MeshRenderer>().enabled = true;
+                    break;
+                case 9:
+                    EnergySphereEmitter.transform.parent.GetComponent<MeshRenderer>().enabled = false;
+                    LauncherEmitter.transform.parent.GetComponent<MeshRenderer>().enabled = true;
+                    break;
+                case 10:
+                    RailGunEmitter.transform.parent.GetComponent<MeshRenderer>().enabled = false;
+                    HullMount.GetComponent<MeshRenderer>().enabled = false;
+                    LauncherEmitter.transform.parent.GetComponent<MeshRenderer>().enabled = false;
+                    PhysicsShot.GetComponent<MeshRenderer>().enabled = false;
+                    break;
             }
         }
     }
