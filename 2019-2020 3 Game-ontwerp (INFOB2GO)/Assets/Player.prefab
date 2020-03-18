@@ -366,6 +366,10 @@ MonoBehaviour:
     type: 3}
   dronebomberProjectile: {fileID: 3547252426517248942, guid: e8c715527a5933b45a6e395054bf185a,
     type: 3}
+  turretLastFired: 0
+  hullLastFired: 0
+  roofLastFired: 0
+  sonicCharge: 0
   movementSpeed: 3
   rotationSpeed: 45
   cameraController: {fileID: 4224066120955953208}
@@ -373,9 +377,18 @@ MonoBehaviour:
   HullProjectileEmitter: {fileID: 2735556841830608385}
   RoofProjectileEmitter: {fileID: 7187061256674625298}
   healthController: {fileID: 5405663696623783659}
+  laserShot: {fileID: 0}
+  autoCannonShot: {fileID: 0}
+  canisterShot: {fileID: 0}
+  gatlingShot: {fileID: 0}
+  railgunShot: {fileID: 0}
+  physicsShot: {fileID: 0}
+  mortierShot: {fileID: 0}
+  energyShot: {fileID: 0}
+  engineSound: {fileID: 0}
+  tracksSound: {fileID: 0}
   scale: 0.25
   scrap: 0
-  health: 1000
   maxhealth: 1000
   totalscrap: 0
   stage: 1
@@ -511,6 +524,7 @@ MonoBehaviour:
   destroyedParts:
   - {fileID: 4224066120371131723}
   health: 100
+  maxhealth: 0
 --- !u!1 &4224066120471234488
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,7 +598,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.26041293, g: 0.29804057, b: 0.41509432, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1483,6 +1497,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6049037300230527456, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 5405663696623783659}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a71d1170ed2e0a34589a1b3955b80d3b, type: 3}
 --- !u!224 &5885662532612664297 stripped
