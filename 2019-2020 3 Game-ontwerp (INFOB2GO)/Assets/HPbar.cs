@@ -22,12 +22,12 @@ public class HPbar : MonoBehaviour
 
     void Update()
     {
-        if (health.health < 100 && goalarm)
+        if (health.health < 300 && goalarm)
         {
             goalarm = false;
             alarm.Alarm();
         }
-        if (health.health > 200)
+        if (health.health > 300)
         {
             goalarm = true;
         }
