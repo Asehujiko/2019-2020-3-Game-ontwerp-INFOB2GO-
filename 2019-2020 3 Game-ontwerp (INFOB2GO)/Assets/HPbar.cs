@@ -9,7 +9,7 @@ public class HPbar : MonoBehaviour
     public HealthController health;
     float overlaystart;
     float heathbarstart;
-    public int maxoffset = 270;
+    public int maxoffset = 175;
 
     void Start()
     {

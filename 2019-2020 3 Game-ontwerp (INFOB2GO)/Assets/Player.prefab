@@ -2062,6 +2062,11 @@ PrefabInstance:
       propertyPath: health
       value: 
       objectReference: {fileID: 5405663696623783659}
+    - target: {fileID: 4447687638574094371, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: maxoffset
+      value: 185
+      objectReference: {fileID: 0}
     - target: {fileID: 4458719436221460199, guid: a71d1170ed2e0a34589a1b3955b80d3b,
         type: 3}
       propertyPath: m_Layer

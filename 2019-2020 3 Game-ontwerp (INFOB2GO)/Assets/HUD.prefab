@@ -2063,7 +2063,7 @@ MonoBehaviour:
   overlay: {fileID: 7265811959923021006}
   healthbar: {fileID: 7214389740277704361}
   health: {fileID: 0}
-  maxoffset: 270
+  maxoffset: 185
 --- !u!1 &4859723136672075098
 GameObject:
   m_ObjectHideFlags: 0
