@@ -185,7 +185,7 @@ public class PlayerController : WeaponController
                     SmallTurret.GetComponent<MeshRenderer>().enabled = false;
                     MortierEmitter.transform.parent.GetComponent<MeshRenderer>().enabled = true;
                     LargeTurret.GetComponent<MeshRenderer>().enabled = true;
-                    Camera.transform.localPosition += new Vector3(0, 1, -1);
+                    Camera.transform.localPosition += new Vector3(0, 0.5f, -0.5f);
                     break;
                 case 8:
                     MortierEmitter.transform.parent.GetComponent<MeshRenderer>().enabled = false;
