@@ -70,6 +70,10 @@ public class EnemyController : HealthController
 
     void Update()
     {
+        if (dead)
+        {
+            return;
+        }
         if (!seeplayer && Timer())
         {
             CheckSeePlayer();
