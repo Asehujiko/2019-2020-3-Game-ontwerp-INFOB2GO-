@@ -29,7 +29,9 @@ MonoBehaviour:
   destroyedParts:
   - {fileID: 7012834106118309240, guid: cd7e5898f8c6fe64087e2136f4a74bda, type: 3}
   - {fileID: 8660180737549068241, guid: 53688a3a1b7f17443b75e40d929ea489, type: 3}
+  - {fileID: 5187558239816386563, guid: 3e67ea257bd8d3540bb6979f30aab718, type: 3}
   health: 50
+  maxheath: 0
 --- !u!1001 &8945605009712466338
 PrefabInstance:
   m_ObjectHideFlags: 0
