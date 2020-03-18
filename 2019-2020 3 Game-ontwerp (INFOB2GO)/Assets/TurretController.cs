@@ -23,6 +23,11 @@ public class TurretController : MonoBehaviour
 
     void Update()
     {
+        PlayerController player = body.GetComponent<PlayerController>();
+        if (player.dead)
+        {
+            return;
+        }
         target = cameraRotator.gameObject.GetComponent<CameraController>().aimingPoint;
         turretloction = transform.position;
         bodyrotation = body.transform.rotation;

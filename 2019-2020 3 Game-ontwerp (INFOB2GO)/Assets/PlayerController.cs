@@ -44,11 +44,15 @@ public class PlayerController : WeaponController
     public LayerMask ignoreWeaponMask;
     private LayerMask cameramask;
 
+    public bool dead;
+
     void Start()
     {
+        dead = false;
         cameramask = LayerMask.GetMask("Camera");
         healthController.health = maxhealth;
         healthController.maxheath = maxhealth;
+        healthController.SetRemove(false);
         spawnController = FindObjectOfType<SpawnController>();
 
         scaleChange = new Vector3(scale, scale, scale);
@@ -62,6 +66,11 @@ public class PlayerController : WeaponController
 
     protected override void Update()
     {
+        if (healthController.health <= 0 || dead)
+        {
+            dead = true;
+            return;
+        }
         base.Update();
         transform.Translate(0, 0, Input.GetAxis("Vertical") * movementSpeed * Time.deltaTime);
         transform.Rotate(0, Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime, 0);
@@ -185,7 +194,7 @@ public class PlayerController : WeaponController
                     SmallTurret.GetComponent<MeshRenderer>().enabled = false;
                     MortierEmitter.transform.parent.GetComponent<MeshRenderer>().enabled = true;
                     LargeTurret.GetComponent<MeshRenderer>().enabled = true;
-                    Camera.transform.localPosition += new Vector3(0, 1, -1);
+                    Camera.transform.localPosition += new Vector3(0, 0.5f, -0.5f);
                     break;
                 case 8:
                     MortierEmitter.transform.parent.GetComponent<MeshRenderer>().enabled = false;
