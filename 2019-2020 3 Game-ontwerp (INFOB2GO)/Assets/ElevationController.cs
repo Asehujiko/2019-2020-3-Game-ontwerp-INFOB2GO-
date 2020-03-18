@@ -23,6 +23,11 @@ public class ElevationController : MonoBehaviour
 
     void Update()
     {
+        PlayerController player = body.GetComponent<PlayerController>();
+        if (player.dead)
+        {
+            return;
+        }
         target = cameraRotator.gameObject.GetComponent<CameraController>().aimingPoint;
         elevationlocation = transform.position;
         bodyrotation = body.transform.rotation;

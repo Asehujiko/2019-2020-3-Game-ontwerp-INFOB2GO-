@@ -9,6 +9,7 @@ public class HealthController : MonoBehaviour
     public int health;
     protected bool dead;
     public int maxheath;
+    private bool removeself = true;
 
     public void setHealth(int health)
     {
@@ -20,6 +21,11 @@ public class HealthController : MonoBehaviour
         health -= damage;
         if (health <= 0)
             die();
+    }
+
+    public void SetRemove(bool remove)
+    {
+        removeself = remove;
     }
 
     public virtual void die()
@@ -34,6 +40,10 @@ public class HealthController : MonoBehaviour
             for (int i = 0; i < destroyedParts.Count; i++)
             {
                 Instantiate(destroyedParts[i], transform.position, transform.rotation);
+            }
+            if (!removeself) 
+            {
+                return;
             }
             Destroy(gameObject);
         }
