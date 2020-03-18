@@ -681,7 +681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrap: {fileID: 0}
   destroyedParts:
-  - {fileID: 4224066120371131723}
+  - {fileID: 8714669243377067210, guid: 9493a1866a66ab84ab1dec2bf5dc0337, type: 3}
   health: 100
   maxheath: 0
 --- !u!82 &7611694473175053676
