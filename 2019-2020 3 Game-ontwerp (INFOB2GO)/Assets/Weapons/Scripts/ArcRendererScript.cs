@@ -14,6 +14,8 @@ public class ArcRendererScript : MonoBehaviour
         LineRenderer arcRenderer = gameObject.AddComponent<LineRenderer>();
         arcRenderer.SetPosition(0, transform.position);
         arcRenderer.SetPosition(1, target);
+        arcRenderer.startColor = Color.cyan;
+        arcRenderer.endColor = Color.blue;
         arcRenderer.startWidth = 0.1f;
         arcRenderer.endWidth = 0.1f;
     }
