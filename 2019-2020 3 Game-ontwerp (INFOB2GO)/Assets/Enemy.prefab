@@ -318,6 +318,7 @@ MonoBehaviour:
   scrap: {fileID: 2358608120228197252, guid: 40a9a5ef67ebe9f4aa00cc9a31186bb9, type: 3}
   destroyedParts: []
   health: 100
+  maxhealth: 0
   clip: {fileID: 8300000, guid: a69941da9fa134e43951a772022dcc41, type: 3}
   rigidbody: {fileID: 4902358342869343820}
   seePoint:
@@ -385,6 +386,15 @@ MonoBehaviour:
     type: 3}
   dronebomberProjectile: {fileID: 8597309387209336113, guid: f582c9f385db4664b9ab809118bb8627,
     type: 3}
+  audioSource: {fileID: -7501714562680819237}
+  laserShot: {fileID: 8300000, guid: 1b18f29c8384fcb4fa4a844a59d1125e, type: 3}
+  autoCannonShot: {fileID: 8300000, guid: cfa8ea77008122c41b06a738bd270806, type: 3}
+  canisterShot: {fileID: 8300000, guid: 6d8ee062df84eb94ebc055c39a770791, type: 3}
+  gatlingShot: {fileID: 8300000, guid: efa5fb86eeb5aaf4993a41bc3af68034, type: 3}
+  railgunShot: {fileID: 8300000, guid: 8ccf953f9f4cdb34f9a4ba25b0e17c53, type: 3}
+  physicsShot: {fileID: 8300000, guid: 6ad8da48aae48ed428d163c551cf82bf, type: 3}
+  mortierShot: {fileID: 8300000, guid: d4b389badccddba4dad7a47d97104118, type: 3}
+  energyShot: {fileID: 8300000, guid: 83010c4dfabbffc45b1027e7c6b146ce, type: 3}
   turretLastFired: 0
   hullLastFired: 0
   roofLastFired: 0
@@ -548,7 +558,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

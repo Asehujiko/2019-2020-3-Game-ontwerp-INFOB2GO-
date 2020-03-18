@@ -19,10 +19,18 @@ public class WeaponController : MonoBehaviour
     public GameObject energysphereProjectile;
     public GameObject dronebomberProjectile;
 
-    //public GameObject TurretProjectileEmitter;
-    //public GameObject HullProjectileEmitter;
-    //public GameObject RoofProjectileEmitter;
+    //sounds
+    public AudioSource audioSource;
+    public AudioClip laserShot;
+    public AudioClip autoCannonShot;
+    public AudioClip canisterShot;
+    public AudioClip gatlingShot;
+    public AudioClip railgunShot;
+    public AudioClip physicsShot;
+    public AudioClip mortierShot;
+    public AudioClip energyShot;
 
+    //timers
     public float turretLastFired = 0;
     public float hullLastFired = 0;
     public float roofLastFired = 0;
@@ -71,6 +79,7 @@ public class WeaponController : MonoBehaviour
 
             turretProjectile.GetComponent<Rigidbody>().AddRelativeForce(0, 5000, 0);
             turretProjectile.GetComponent<ProjectileScript>().setDamage(20);
+            audioSource.PlayOneShot(autoCannonShot);
         }
     }
 
@@ -86,6 +95,7 @@ public class WeaponController : MonoBehaviour
                 hullProjectiles[i] = Instantiate(canistershotProjectile, direction.transform.position, direction.transform.rotation) as GameObject;
                 hullProjectiles[i].GetComponent<Rigidbody>().AddRelativeForce(Random.Range(-1000f, 1000f), 2500, Random.Range(-1000f, 0));
                 hullProjectiles[i].GetComponent<ProjectileScript>().setDamage(20);
+                audioSource.PlayOneShot(canisterShot);
             }
         }
     }
@@ -100,6 +110,7 @@ public class WeaponController : MonoBehaviour
 
             turretProjectile.GetComponent<Rigidbody>().AddRelativeForce(Random.Range(-100f, 100f), 2500, Random.Range(-100f, 100f));
             turretProjectile.GetComponent<ProjectileScript>().setDamage(5);
+            audioSource.PlayOneShot(gatlingShot);
         }
     }
 
@@ -130,6 +141,7 @@ public class WeaponController : MonoBehaviour
 
             beamRenderer.SetPosition(0, direction.transform.position);
             beamRenderer.SetPosition(1, endPoint);
+            audioSource.PlayOneShot(canisterShot);
         }
     }
 
@@ -143,6 +155,7 @@ public class WeaponController : MonoBehaviour
 
             hullProjectile.GetComponent<Rigidbody>().AddRelativeForce(0, 500, 0);
             hullProjectile.GetComponent<BouncerScript>().setDamage(50);
+            audioSource.PlayOneShot(physicsShot);
         }
     }
 
@@ -159,6 +172,7 @@ public class WeaponController : MonoBehaviour
             GameObject roofProjectile2 = Instantiate(inboundMortarProjectile, targetlocation + new Vector3(0, 20, 0), direction.transform.rotation) as GameObject;
             roofProjectile2.GetComponent<Rigidbody>().AddRelativeForce(0, -250, 0);
             roofProjectile2.GetComponent<GrenadeScript>().setDamage(100);
+            audioSource.PlayOneShot(mortierShot);
         }
     }
 
