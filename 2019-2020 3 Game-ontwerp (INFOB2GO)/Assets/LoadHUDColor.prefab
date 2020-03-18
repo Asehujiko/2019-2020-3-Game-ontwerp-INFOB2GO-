@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5871967872375649163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5871967872375649165}
+  - component: {fileID: 5871967872375649162}
+  m_Layer: 0
+  m_Name: LoadHUDColor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5871967872375649165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5871967872375649163}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5871967872375649162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5871967872375649163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d307e012a03e5a141b876e4d8f36e13f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CenterTarget: {fileID: 0}
+  TITurret: {fileID: 0}
+  TIBody: {fileID: 0}
+  TIKompas: {fileID: 0}
+  EIAbsolute: {fileID: 0}
+  EIRelative: {fileID: 0}
+  RIAbsolute: {fileID: 0}
+  RIRelative: {fileID: 0}
+  TI2Rotation: {fileID: 0}
+  TI2Body: {fileID: 0}
+  TI2Barrel: {fileID: 0}
+  TargetingReticle: {fileID: 0}
+  HP1: {fileID: 0}
+  HP21: {fileID: 0}
+  HP22: {fileID: 0}
+  HP23: {fileID: 0}
+  HP24: {fileID: 0}
+  HP25: {fileID: 0}
+  HP3: {fileID: 0}
+  HP41: {fileID: 0}
+  HP42: {fileID: 0}
+  HP43: {fileID: 0}
+  HP44: {fileID: 0}
+  HP45: {fileID: 0}
+  Red: {fileID: 2100000, guid: fd199ddfd393a2d4eaeaa2e5b3415ae5, type: 2}
+  Orange: {fileID: 2100000, guid: 9ae86c0f226588b4bbee428490022c35, type: 2}
+  Yellow: {fileID: 2100000, guid: d9fcf996101b21f4282a5046c7e7b93d, type: 2}
+  Green: {fileID: 2100000, guid: a705aa1e1bdbf9e4c88c5a802bc9f4be, type: 2}
+  Cyan: {fileID: 2100000, guid: 251ad48282ef110448bd307c91495b52, type: 2}
+  Blue: {fileID: 2100000, guid: ec71144d29fefea48a1f655df6698e14, type: 2}
+  Purple: {fileID: 2100000, guid: a68aa2c2937a68e4c8930b9810cd20f4, type: 2}
+  Pink: {fileID: 2100000, guid: e71b0aa7de854bd41b59f169d427a811, type: 2}

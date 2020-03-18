@@ -18,6 +18,7 @@ public class WeaponController : MonoBehaviour
     public GameObject inboundMortarProjectile;
     public GameObject energysphereProjectile;
     public GameObject dronebomberProjectile;
+    public GameObject shockwave;
 
     //sounds
     public AudioSource audioSource;
@@ -208,9 +209,11 @@ public class WeaponController : MonoBehaviour
             for (int i = 0; i < others.Length; i++)
             {
                 HealthController otherController = FindParentWithHealth(others[i].gameObject);
-
                 if (otherController != null)
+                {
+                    Instantiate(shockwave, otherController.transform.position, otherController.transform.rotation);
                     otherController.die();
+                }
             }
         }
     }
