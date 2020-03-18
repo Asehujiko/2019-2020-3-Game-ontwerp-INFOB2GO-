@@ -7,6 +7,7 @@ public class HealthController : MonoBehaviour
     public GameObject scrap;
     public List<GameObject> destroyedParts;
     public int health;
+    public int maxhealth;
     protected bool dead;
 
     public void setHealth(int health)
