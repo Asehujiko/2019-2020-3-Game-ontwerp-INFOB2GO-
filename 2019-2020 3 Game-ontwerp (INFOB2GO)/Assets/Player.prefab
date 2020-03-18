@@ -683,6 +683,7 @@ MonoBehaviour:
   destroyedParts:
   - {fileID: 4224066120371131723}
   health: 100
+  maxhealth: 0
 --- !u!1 &4224066120471234488
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,7 +757,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.26041293, g: 0.29804057, b: 0.41509432, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1570,6 +1571,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4224066120371131721}
     m_Modifications:
+    - target: {fileID: 775556269957496290, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 5405663696623783659}
     - target: {fileID: 3244510508424374167, guid: a71d1170ed2e0a34589a1b3955b80d3b,
         type: 3}
       propertyPath: m_Layer
@@ -1930,6 +1936,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6049037300230527456, guid: a71d1170ed2e0a34589a1b3955b80d3b,
+        type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 5405663696623783659}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a71d1170ed2e0a34589a1b3955b80d3b, type: 3}
 --- !u!1 &5885662533289001925 stripped
