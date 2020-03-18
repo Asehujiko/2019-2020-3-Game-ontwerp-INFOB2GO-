@@ -2063,7 +2063,7 @@ MonoBehaviour:
   overlay: {fileID: 7265811959923021006}
   healthbar: {fileID: 7214389740277704361}
   health: {fileID: 0}
-  maxoffset: 185
+  maxoffset: 175
 --- !u!1 &4859723136672075098
 GameObject:
   m_ObjectHideFlags: 0
@@ -2619,7 +2619,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 270, y: 100}
+  m_SizeDelta: {x: 250, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1729086124287602629
 MonoBehaviour:
