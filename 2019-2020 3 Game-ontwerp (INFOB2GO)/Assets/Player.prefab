@@ -37,6 +37,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.198
       objectReference: {fileID: 0}
+    - target: {fileID: 1276908647797589289, guid: f364d963026704e40862b4f174779d05,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 7724156235588067734}
     - target: {fileID: 3463912532375039663, guid: f364d963026704e40862b4f174779d05,
         type: 3}
       propertyPath: m_Layer
@@ -170,6 +175,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f364d963026704e40862b4f174779d05, type: 3}
+--- !u!82 &7724156235588067734 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1700518778966780185, guid: f364d963026704e40862b4f174779d05,
+    type: 3}
+  m_PrefabInstance: {fileID: 8982644951840606351}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4039017648039187648 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4946565217124523087, guid: f364d963026704e40862b4f174779d05,

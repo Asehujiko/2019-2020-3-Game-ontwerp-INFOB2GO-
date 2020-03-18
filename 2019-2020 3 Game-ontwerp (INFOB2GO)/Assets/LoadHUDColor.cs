@@ -32,6 +32,7 @@ public class LoadHUDColor : MonoBehaviour
     public GameObject HP43;
     public GameObject HP44;
     public GameObject HP45;
+    public GameObject emergency;
 
     // The HUD color materials
     public Material Red;
@@ -71,6 +72,7 @@ public class LoadHUDColor : MonoBehaviour
         HUDList.Add(HP43);
         HUDList.Add(HP44);
         HUDList.Add(HP45);
+        HUDList.Add(emergency);
 
         if (PlayerPrefs.GetString("HUDColor") == "Red")
         {
