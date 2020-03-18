@@ -2852,6 +2852,11 @@ PrefabInstance:
       propertyPath: HP45
       value: 
       objectReference: {fileID: 7092479415754728543}
+    - target: {fileID: 5871967872375649162, guid: 779044a7cf56b6c43acaf078c682a5be,
+        type: 3}
+      propertyPath: emergency
+      value: 
+      objectReference: {fileID: 201697189638378818}
     - target: {fileID: 5871967872375649163, guid: 779044a7cf56b6c43acaf078c682a5be,
         type: 3}
       propertyPath: m_Name
