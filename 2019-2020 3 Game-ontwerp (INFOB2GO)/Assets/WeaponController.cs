@@ -218,7 +218,6 @@ public class WeaponController : MonoBehaviour
     public HealthController FindParentWithHealth(GameObject childObject)
     {
         Transform t = childObject.transform;
-        int i = 0;
         if (t.gameObject.GetComponent<HealthController>())
         {
             return t.gameObject.GetComponent<HealthController>();

@@ -2065,7 +2065,7 @@ PrefabInstance:
     - target: {fileID: 4447687638574094371, guid: a71d1170ed2e0a34589a1b3955b80d3b,
         type: 3}
       propertyPath: maxoffset
-      value: 185
+      value: 175
       objectReference: {fileID: 0}
     - target: {fileID: 4458719436221460199, guid: a71d1170ed2e0a34589a1b3955b80d3b,
         type: 3}
